@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Listeners Tests" parallel="false">
+    <test name="Sub-Tests">
+        <classes>
+           <!--Not to include Setup Test here -->
+           <class name="testcases.LoginPageTest"/>
+        </classes>
+    </test>
+    
+   
+    <listeners>
+        <listener class-name="helper.TestListener"/>
+        <listener class-name="helper.RetryListener"/>
+  	</listeners>
+   
+</suite>
