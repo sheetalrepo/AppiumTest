@@ -76,12 +76,37 @@ JSON:
    
    
 
+12. Setup NodeJS
+Require to start Appium from code other wise we can also use Appium server manually in local machine
+https://nodejs.org/en/download   
+Download exe and check checkbox "install all necessary tools"
+C:\Program Files\nodejs\
+node -v
+v18.16.0
+
+
+
+
+
 
 
 
 #Demo Topics:
 1. Different Locators - ID, Xpath, Class Name etc
 2. Tap
+
+https://applitools.com/blog/whats-new-appium-java-client-8/
+
+#Changes in Java-cleint 8
+Java client suppport Selenium 4 and strictly compliant to W3C 
+Duration class handles all time related things
+1. MobileElement has been removed
+2. DesiredCapability removed and now we have UiAutomator2Options 
+3. "java-client" dependency already have "selenium-java".
+   Just we need ti add "selenium-support" for ExpectedCondition and WebDriverWait
+4. TouchActions Deprecated....Action introduced
+5. MobileBy replaced with AppiumBy
+6. LaunchApp, CloseApp, ResetApp Depricated
 
 
 

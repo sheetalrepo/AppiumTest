@@ -19,12 +19,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import helper.DriverRepo;
+import helper.DriverRepo_v8;
 import helper.Logo;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
@@ -38,15 +38,16 @@ import io.appium.java_client.touch.offset.PointOption;
  */
 public class BasePage {
 
-	static AppiumDriver<MobileElement> driver;
-	
+	// static AppiumDriver driver;
+	static AndroidDriver driver;
+
 	public Properties properties;
 	String cmd_osdevice, osdevice, device;
 	static String os;
 
 	public BasePage() throws MalformedURLException {
 		getProperties();
-		initDriver(os, device);
+		initDriver_v8(os, device);
 	}
 
 	public void getProperties() {
@@ -66,58 +67,46 @@ public class BasePage {
 			os = cmd_osdevice.split("#")[0];
 			device = cmd_osdevice.split("#")[1];
 			System.out.println("###------ Reading from mvn cmd line -----###");
-			System.out.println("#OS = "+ os);
-			System.out.println("#Device = "+ device);
+			System.out.println("#OS = " + os);
+			System.out.println("#Device = " + device);
 
 		} else {
 			osdevice = properties.getProperty("osdevice");
 			os = osdevice.split("#")[0];
 			device = osdevice.split("#")[1];
 			System.out.println("###------ Reading from qa.properties file -----###");
-			System.out.println("#OS = "+ os);
-			System.out.println("#Device = "+ device);
-			
+			System.out.println("#OS = " + os);
+			System.out.println("#Device = " + device);
+
 		}
 	}
 
-	public void initDriver(String os, String device) throws MalformedURLException {
-		System.out.println("###------ Initialising Driver -----###");
+	public void initDriver_v8(String os, String device) throws MalformedURLException {
+		System.out.println("###------ Initialising Driver v8 -----###");
 
 		if (os.equals("ANDROID") && device.equals("NEXUS_5_API24_APP")) {
-			driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"),
-					DriverRepo.ANDROID_NEXUS_5_API24_APP.getDesiredCapabilities());
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			//Logo.printLogo("android");
-		}else if(os.equalsIgnoreCase("ANDROID") && device.equals("PIXEL_4_API27_APP")) {
-			driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"),
-					DriverRepo.ANDROID_PIXEL_4_API27_APP.getDesiredCapabilities());
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			//Logo.printLogo("android");
-		}else if(os.equals("android") && device.equals("Nexus_5_API_24_Chrome")) {
-			driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"),
+			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
+					DriverRepo_v8.ANDROID_NEXUS_5_API24_APP.getUiAutomator2Options());
+			// Logo.printLogo("android");
+		} else if (os.equalsIgnoreCase("ANDROID") && device.equals("PIXEL_4_API27_APP")) {
+			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
+					DriverRepo_v8.ANDROID_PIXEL_4_API27_APP.getUiAutomator2Options());
+		} else if (os.equals("android") && device.equals("Nexus_5_API_24_Chrome")) {
+			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
 					DriverRepo.ANDROID_NEXUS_5_API24_CHROME.getDesiredCapabilities());
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			//Logo.printLogo("android");
-		}
-		else if (os.equals("ios") && device.equals("iPhone_6_9.2")) {
+			// Logo.printLogo("android");
+		} else if (os.equals("ios") && device.equals("iPhone_6_9.2")) {
 			System.out.println("Driver: iOS driver not configured");
-			/*
-			driver = new IOSDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"),
-					DriverRepo.IOS_IPHONE6_OS_9_2.getDesiredCapabilities());
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			Logo.printLogo("ios iPhone_6_9.2");
-			*/
 		} else {
 			System.out.println("Driver: no driver selected");
 			System.out.println("Running test with driver: " + os + " & device: " + device);
 		}
 
 	}
-	
 
 	/**
-	 * Based on android and ios, this method will return By locator of any
-	 * element
+	 * Based on android and ios, this method will return By locator of any element
 	 */
 	public static By getByElement(By android_element, By ios_element) {
 		if (os.equalsIgnoreCase("ANDROID")) {
@@ -127,7 +116,7 @@ public class BasePage {
 		}
 		return null;
 	}
-	
+
 	public static MobileBy getMobileByElement(MobileBy android_element, MobileBy ios_element) {
 		if (os.equalsIgnoreCase("ANDROID")) {
 			return android_element;
@@ -142,7 +131,7 @@ public class BasePage {
 	}
 
 	public static void resetApp() {
-		driver.resetApp();
+		// driver.resetApp();
 	}
 
 	/*
@@ -156,7 +145,7 @@ public class BasePage {
 		if (os.equals("android")) {
 			System.out.println("BasePage > getScreenShot");
 			dir = "src/test/resources/screenshots/android/";
-			
+
 //			dir = "C:\\Users\\cmash\\Documents\\Papi\\Repo\\AppiumTest\\src\\test\\resources\\screenshots\\android\\";
 		} else {
 			dir = "/Users/sheetalsingh/Documents/workspace/AppiumApp/src/test/resources/screenshots/ios/";
@@ -177,7 +166,7 @@ public class BasePage {
 	public static void navigateBack() {
 		driver.navigate().back();
 	}
-	
+
 	public static void click(By locator) {
 		driver.findElement(locator).click();
 	}
@@ -190,7 +179,7 @@ public class BasePage {
 		return driver.findElement(locator).isDisplayed();
 	}
 
-	public static List<MobileElement> getElementList(By locator) {
+	public static List getElementList(By locator) {
 		return driver.findElements(locator);
 	}
 
@@ -201,55 +190,53 @@ public class BasePage {
 	public static String getAttributeValue(By locator, String attribute) {
 		return driver.findElement(locator).getAttribute(attribute);
 	}
-	
-    /**
-     * Method will swipe from bottom to top direction means page will move towards downward accept parameter like 0.90, 0.10 and swipe accordingly
-     */
-	/*
-	public static void swipeVerticallyBottomToUp(double bottom, double up){
-		Dimension size;
-        size = driver.manage().window().getSize();
 
-        int startX = size.width / 2;
-        int startY = (int) (size.height * bottom);
-        int endY = (int) (size.height * up);
-        System.out.println("starty = " + startY + " ,endy = " + endY + " , startx = " + startX);
+	/**
+	 * Method will swipe from bottom to top direction means page will move towards
+	 * downward accept parameter like 0.90, 0.10 and swipe accordingly
+	 */
 
-        
-        driver.swipe(startX, startY, startX, endY, 1000);
-	}*/
-	
-	
-	public static void swipeHorizontal(double startPercentage, double finalPercentage, double anchorPercentage, int duration) throws Exception {
-		TouchAction action = new TouchAction(driver);
-        Dimension size = driver.manage().window().getSize();
-        int width=size.width;
-        int height=size.height;	
-        
-        int middleOfY=height/2;
-        int startXCoordinate= (int)(width*.7);
-        int endXCoordinate= (int)(width*.2);
-        
-        action.press(PointOption.point(middleOfY, startXCoordinate))
-        .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-        .moveTo(PointOption.point(middleOfY, endXCoordinate)).release().perform();
-    }
+	public static void swipeVerticallyBottomToUp(double bottom, double up) {
+		/*
+		 * Dimension size; size = driver.manage().window().getSize();
+		 * 
+		 * int startX = size.width / 2; int startY = (int) (size.height * bottom); int
+		 * endY = (int) (size.height * up); System.out.println("starty = " + startY +
+		 * " ,endy = " + endY + " , startx = " + startX);
+		 * 
+		 * 
+		 * driver.swipe(startX, startY, startX, endY, 1000);
+		 */
+	}
 
+	public static void swipeHorizontal(double startPercentage, double finalPercentage, double anchorPercentage,
+			int duration) throws Exception {
+		/*
+		 * TouchAction action = new TouchAction(driver); Dimension size =
+		 * driver.manage().window().getSize(); int width=size.width; int
+		 * height=size.height;
+		 * 
+		 * int middleOfY=height/2; int startXCoordinate= (int)(width*.7); int
+		 * endXCoordinate= (int)(width*.2);
+		 * 
+		 * action.press(PointOption.point(middleOfY, startXCoordinate))
+		 * .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+		 * .moveTo(PointOption.point(middleOfY, endXCoordinate)).release().perform();
+		 */
+	}
 
-    public static void swipeVertical(double startPercentage, double finalPercentage, double anchorPercentage, int duration) throws Exception {
-        TouchAction  action =new TouchAction(driver);	
-        Dimension size	=driver.manage().window().getSize();
-        int width=size.width;
-        int height=size.height;				
-        int middleOfX=width/2;
-        int startYCoordinate= (int)(height*.7);
-        int endYCoordinate= (int)(height*.2);
-        				
-        action.press(PointOption.point(middleOfX, startYCoordinate))
-        .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-        .moveTo(PointOption.point(middleOfX, endYCoordinate)).release().perform();
-    
-    }
-	
+	public static void swipeVertical(double startPercentage, double finalPercentage, double anchorPercentage,
+			int duration) throws Exception {
+		/*
+		 * TouchAction action =new TouchAction(driver); Dimension size
+		 * =driver.manage().window().getSize(); int width=size.width; int
+		 * height=size.height; int middleOfX=width/2; int startYCoordinate=
+		 * (int)(height*.7); int endYCoordinate= (int)(height*.2);
+		 * 
+		 * action.press(PointOption.point(middleOfX, startYCoordinate))
+		 * .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+		 * .moveTo(PointOption.point(middleOfX, endYCoordinate)).release().perform();
+		 */
+	}
 
 }

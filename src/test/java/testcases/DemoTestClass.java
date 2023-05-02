@@ -2,11 +2,9 @@ package testcases;
 
 import java.net.MalformedURLException;
 
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -14,11 +12,8 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import pages.BasePage;
 import pages.HomePage;
-import pages.LoginPage;
 
 /*
  * Demo class for TCs
@@ -27,7 +22,7 @@ import pages.LoginPage;
 public class DemoTestClass {
 	ExtentReports extent;
 	ExtentTest test;
-	final String filePath = "src/test/resources/extentreporting/demo_test_report.html";
+	final String filePath = "src/test/resources/extentreporting/demo_test_report_v8.html";
 	final String screenShotPath = "src/test/resources/extentreporting";
 	
 	@BeforeSuite

@@ -2,15 +2,22 @@ package demo;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
+import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.Rectangle;
+
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.touch.TapOptions;
+import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.offset.ElementOption;
-import io.appium.java_client.TouchAction;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /*
  * platformName : Android
@@ -24,7 +31,6 @@ import org.openqa.selenium.WebElement;
  * app: Can be download directly in emulators or better pass from project
  */
 
-
 /*
  * Tap
  * 
@@ -33,28 +39,66 @@ import org.openqa.selenium.WebElement;
 
 public class A2_AppiumFeatures {
 
-	static AppiumDriver<MobileElement> driver;
+	//static AppiumDriver<MobileElement> driver;
+	//static AppiumDriver driver;
+	static AndroidDriver driver;
 	
+	/*
+	 * Tap: Only for Mobile Click: For Mobile and Web
+	 */
 	public void testTap() {
 		WebElement views = driver.findElement(By.xpath("//android.widget.TextView[@content-desc='Views']"));
-		TouchAction touch =new TouchAction(driver);
-		touch.tap(TapOptions.tapOptions().withElement(ElementOption.element(views))).perform();
-	
+		
+		waitForElementToBeClickable(views);
+	    Rectangle rec = views.getRect();
+	    int centerX = rec.getX() + (rec.getWidth() / 2);
+	    int centerY = rec.getY() + (rec.getHeight() / 2);
+	    Point elementLocation = new Point(centerX, centerY);
+	    tapPoint(elementLocation);
+		
 		driver.navigate().back();
-
 	}
 	
-	public static void main(String[] args) throws MalformedURLException {
-		A1_AppiumBasics basicObj = new A1_AppiumBasics();
-		driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"),
-				basicObj.getDesiredCapabilities());
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	
+	public void waitForElementToBeClickable(WebElement element){
+		 new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.elementToBeClickable(element));
+	}
+	
+	
+	public static void tapPoint(Point point) {
+	    PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+	    Sequence tap = new Sequence(finger, 1);
+	    tap.addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), point.getX(), point.getY()));
+	    tap.addAction(finger.createPointerDown(0));
+	    tap.addAction(finger.createPointerUp(0));
+	    driver.perform(Collections.singletonList(tap));
+	}
+
+	// Views > Expandable Lists > Custom Adapter > Dog Names (Long Press)
+	public void testLongPress() {
+		driver.findElement(By.xpath("//android.widget.TextView[@content-desc='Views']")).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@content-desc='Expandable Lists']")).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@content-desc='1. Custom Adapter']")).click();
+
+		WebElement dogNames = driver.findElement(By.xpath("//*[contains(@text,'Dog')]"));
+		LongPressOptions longPressOptions = new LongPressOptions();
+		longPressOptions.withDuration(Duration.ofSeconds(3)).withElement(ElementOption.element(dogNames));
+
+		//TODO
+		//TouchAction action = new TouchAction(driver);
+		//action.longPress(longPressOptions).release().perform();
 		
+		driver.findElement(By.xpath("//android.widget.TextView[@text='Sample action']")).click();
+	}
+
+	public static void main(String[] args) throws MalformedURLException {
+		A1_AppiumBasics_v8 basicObj = new A1_AppiumBasics_v8();
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), basicObj.getUIAutomator2Options());
 		
 		A2_AppiumFeatures obj = new A2_AppiumFeatures();
-		obj.testTap();
-		
-	
+		 obj.testTap();
+		//obj.testLongPress();
+
 	}
 
 }
