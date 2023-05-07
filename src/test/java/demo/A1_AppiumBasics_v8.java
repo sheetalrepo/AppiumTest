@@ -1,54 +1,24 @@
 package demo;
 
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.options.UiAutomator2Options;
-import io.appium.java_client.remote.MobileCapabilityType;
-import io.appium.java_client.remote.MobilePlatform;
 
 /*
- * platformName : Android
- * platformVersion : 8.1, Emulator settings will show platform version (Edit Emulator Device)
- * 
- * appPackage: adb shell dumpsys window windows | grep mFocusedApp
- * appActivity: same as above
- * 
- * deviceName: emulator-5554, adb devices
- * appium-version : 1.22.3, Start Appium server and it will display
- * app: Can be download directly in emulators or better pass from project
+ * This class will work with ApiDemos-debug.apk
  */
-
-
 public class A1_AppiumBasics_v8 {
 
 	static AndroidDriver driver; // Working in 8.3.3
-	
-	public UiAutomator2Options getUIAutomator2Options() {
-		UiAutomator2Options options = new UiAutomator2Options();
-		options
-			.setDeviceName("emulator-5554")
-			.setPlatformVersion("8.1")
-			.setAppPackage("io.appium.android.apis")
-			.setAppActivity(".ApiDemos");
 
-		return options;
-	}
-	
 	//App > Activity > Animation > Back to home page
 	public void testBasicFlow() {
 		driver.findElement(By.xpath("//android.widget.TextView[@content-desc='App']")).click();
-		driver.findElement(By.xpath("//android.widget.TextView[@content-desc='Activity']")).click();
+		driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc='Activity']")).click();
 		driver.findElement(By.xpath("//android.widget.TextView[@content-desc='Animation']")).click();
 		driver.navigate().back();
 		driver.navigate().back();
@@ -71,7 +41,6 @@ public class A1_AppiumBasics_v8 {
 		int list1 = driver.findElements(By.xpath("//android.widget.TextView[@resource-id='android:id/text1']")).size();
 		System.out.println("List of Element 1: " + list1); //6
 		
-		
 		driver.findElement(By.xpath("//android.widget.TextView[@text='Assets']")).click();
 		driver.findElement(By.xpath("//*[contains(@text,'Read')]")).click();
 		String text = driver.findElement(By.id("io.appium.android.apis:id/text")).getText();
@@ -80,7 +49,6 @@ public class A1_AppiumBasics_v8 {
 		driver.navigate().back();
 		driver.navigate().back();
 		driver.navigate().back();
-		
 		
 		int list2 = driver.findElements(By.xpath("//*[@resource-id='android:id/text1' or @text='Media']")).size();
 		System.out.println("List of Element 2: " + list2); //11
@@ -98,13 +66,14 @@ public class A1_AppiumBasics_v8 {
 	}
 	
 	//resource-id = Use driver.findElement(By.id(""))
-	//accessibility id or content-desc= Use driver.findElementByAccessibilityId(""))
+	//accessibility id or content-desc= Use driver.findElement(AppiumBy.accessibilityId("Animation"))
 	public void testIdAndAccessibilityId() {
-		driver.findElement(By.id("android:id/text1")).click();
+		driver.findElement(AppiumBy.id("android:id/text1")).click();
 		driver.navigate().back();
 		//driver.findElementByAccessibilityId("Accessibility").click(); //Removed from java-client v8
+		//driver.findElement(MobileBy.accessibilityId("Animation")).click(); // Deprecated in v8
 		
-		driver.findElement(MobileBy.AccessibilityId("Animation")).click();
+		driver.findElement(AppiumBy.accessibilityId("Animation")).click();
 		driver.navigate().back();
 		
 		driver.findElement(AppiumBy.accessibilityId("App")).click();
@@ -139,12 +108,11 @@ public class A1_AppiumBasics_v8 {
 	
 	
 	public static void main(String[] args) throws MalformedURLException {
+		A0_UIAutomator2 options = new A0_UIAutomator2();
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"),
+				options.getApiDemoApkOptions());
+
 		A1_AppiumBasics_v8 obj = new A1_AppiumBasics_v8();
-		
-		
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
-				obj.getUIAutomator2Options());
-		
 		obj.testBasicFlow();
 		//obj.testXpaths();	
 		//obj.testClassNameLocator();
