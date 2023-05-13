@@ -11,7 +11,7 @@ import io.appium.java_client.android.AndroidDriver;
 /*
  * This class will work with ApiDemos-debug.apk
  */
-public class A1_AppiumBasics_v8 {
+public class A1_AppiumBasicsApp1 {
 
 	static AndroidDriver driver; // Working in 8.3.3
 
@@ -108,18 +108,18 @@ public class A1_AppiumBasics_v8 {
 	
 	
 	public static void main(String[] args) throws MalformedURLException {
-		A0_UIAutomator2 options = new A0_UIAutomator2();
+		A0_UiAutomator2Options options = new A0_UiAutomator2Options();
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"),
 				options.getApiDemoApkOptions());
 
-		A1_AppiumBasics_v8 obj = new A1_AppiumBasics_v8();
+		A1_AppiumBasicsApp1 obj = new A1_AppiumBasicsApp1();
 		obj.testBasicFlow();
 		//obj.testXpaths();	
 		//obj.testClassNameLocator();
 		//obj.testIdAndAccessibilityId();
 		//obj.testGetAttribute();
 		
-		System.out.println("-------- Run Finished ----------");
+		System.out.println("---------- Run Finished ----------");
 	}
 
 }

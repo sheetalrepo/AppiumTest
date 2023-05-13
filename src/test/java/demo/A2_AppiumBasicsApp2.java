@@ -3,15 +3,21 @@ package demo;
 import java.net.MalformedURLException;
 import java.net.URL;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 
 /*
  * This class will work with SauceLab Apk file
+ * 
+ * class AndroidDriver extends AppiumDriver
+ * 
+ * 
  */
-public class A2_AppiumBasics {
+public class A2_AppiumBasicsApp2 {
 
-	static AndroidDriver driver; // Working in 8.3.3
+	static AppiumDriver driver; 
+	//static AndroidDriver driver; 
 
 	//App > Activity > Animation > Back to home page
 	public void testSaucelabBasicFlow() throws InterruptedException {
@@ -29,14 +35,14 @@ public class A2_AppiumBasics {
 	
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 		
-		A0_UIAutomator2 options = new A0_UIAutomator2();
+		A0_UiAutomator2Options options = new A0_UiAutomator2Options();
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"),
 				options.getSauceLabApkOptions());
 		
-		A2_AppiumBasics obj = new A2_AppiumBasics();
+		A2_AppiumBasicsApp2 obj = new A2_AppiumBasicsApp2();
 		obj.testSaucelabBasicFlow();
 		
-		System.out.println("-------- Run Finished ----------");
+		System.out.println("---------- Run Finished ----------");
 	}
 
 }

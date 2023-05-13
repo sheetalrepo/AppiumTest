@@ -3,7 +3,7 @@ package demo;
 import java.io.File;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
-public class A0_UIAutomator2 {
+public class A0_UiAutomator2Options {
 
 	public UiAutomator2Options getApiDemoApkOptions() {
 		System.out.println("-------- Started: Api Demo Apk ----------");
