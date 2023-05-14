@@ -9,6 +9,15 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
 
+/*
+ * Appium 2
+ * Java-client v8
+ * 
+ * Factory class will initialise Driver
+ * Set Driver in AppDriver > ThreadLocal
+ * AppDriver.getDriver() can be used in complete project
+ * 
+ */
 public class AppFactory {
 	static AppiumDriver driver;
 

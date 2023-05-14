@@ -9,7 +9,12 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 
 /*
+ * Appium 2.0
+ * Java-client 8
+ * 
  * This class will work with ApiDemos-debug.apk
+ * App1: https://github.com/appium-boneyard/sample-code/blob/master/sample-code/apps/ApiDemos/bin/ApiDemos-debug.apk
+ * 
  */
 public class A1_AppiumBasicsApp1 {
 

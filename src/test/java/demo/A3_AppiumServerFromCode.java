@@ -27,9 +27,13 @@ public class A3_AppiumServerFromCode {
 		String logFilePath = "C:\\Users\\cmash\\Documents\\Papi\\Repo\\AppiumTest\\src\\test\\resources\\logs\\log2.txt";
 
 		AppiumServiceBuilder builder = new AppiumServiceBuilder();
-		builder.withAppiumJS(new File(nodeJSMainPath)).usingDriverExecutable(new File(nodeExePath)).usingPort(4723)
-				.withArgument(GeneralServerFlag.LOCAL_TIMEZONE).withLogFile(new File(logFilePath))
-				.withIPAddress("127.0.0.1"); // wd/hub will not come in Appium 2
+		builder
+			.withAppiumJS(new File(nodeJSMainPath))
+			.usingDriverExecutable(new File(nodeExePath))
+			.usingPort(4723)
+			.withArgument(GeneralServerFlag.LOCAL_TIMEZONE)
+			.withLogFile(new File(logFilePath))
+			.withIPAddress("127.0.0.1"); // wd/hub will not come in Appium 2
 
 		server = AppiumDriverLocalService.buildService(builder);
 	}
@@ -61,16 +65,15 @@ public class A3_AppiumServerFromCode {
 		driver.findElement(AppiumBy.accessibilityId("open menu")).click();
 		Thread.sleep(1000L);
 		driver.findElement(AppiumBy.accessibilityId("menu item log in")).click();
-		;
+		
 		Thread.sleep(1000L);
 		driver.findElement(AppiumBy.accessibilityId("Username input field")).sendKeys("bob@example.com");
-		;
+		
 		Thread.sleep(1000L);
 		driver.findElement(AppiumBy.accessibilityId("Password input field")).sendKeys("10203040");
-		;
+		
 		Thread.sleep(1000L);
 		driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc='Login button']")).click();
-		;
 	}
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {

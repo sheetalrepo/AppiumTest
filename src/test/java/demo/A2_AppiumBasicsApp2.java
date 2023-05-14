@@ -9,9 +9,9 @@ import io.appium.java_client.android.AndroidDriver;
 
 /*
  * This class will work with SauceLab Apk file
+ * App2: https://github.com/saucelabs/my-demo-app-rn/releases
  * 
  * class AndroidDriver extends AppiumDriver
- * 
  * 
  */
 public class A2_AppiumBasicsApp2 {
