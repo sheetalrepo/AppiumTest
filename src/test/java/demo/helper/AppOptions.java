@@ -73,6 +73,23 @@ public class AppOptions {
 
 		};break;
 		
+		
+		
+		case "Chrome": {
+			System.out.println("-------- Started: Chrome Browser ----------");
+
+			options = new UiAutomator2Options();
+			options
+			.setPlatformName("Android")
+			.setPlatformVersion("8.1")
+			.setAutomationName("UiAutomator2")
+			.setDeviceName("emulator-5554")
+			.noReset()
+			.withBrowserName("Chrome");
+		};break;
+		
+		
+		
 		default: {
 			System.out.println("Pls select correct app name like app1, app2, app3 etc");
 		}

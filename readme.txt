@@ -1,22 +1,13 @@
 
-
-
-#Demo Topics:
-1. Different Locators - ID, Xpath, Class Name etc
-2. Tap
-
 https://applitools.com/blog/whats-new-appium-java-client-8/
 
-
-
-
-
-
-
-
-
-
-   
   
   
-     
+#Appium Youtube Series  
+Demo
+Demo.helper
+note: Other packages are for general framework
+
+
+
+

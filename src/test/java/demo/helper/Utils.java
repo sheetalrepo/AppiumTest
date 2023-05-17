@@ -2,7 +2,6 @@ package demo.helper;
 
 
 import com.google.common.collect.ImmutableList;
-import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
@@ -85,6 +84,24 @@ public class Utils {
         AppDriver.getDriver().perform(ImmutableList.of(sequence));
     }
     
+	
+	public static void scrollTill(By elementToFind) throws InterruptedException {
+		int size = 0;
+		
+		while(size == 0) {
+			System.out.println("Element Not Found ... Keep Scrolling");
+			Utils.scroll("RIGHT", 0.5);
+			Thread.sleep(2000L);
+			size = AppDriver.getDriver().findElements(elementToFind).size();
+			if(size == 1) {
+				System.out.println("Found Element");
+				size++;
+				break;				
+			}
+		}
+	}
+	
+	
     /*
     public static void scrollNclick(By listItems, String attrName, String text) throws InterruptedException {
         String prevPageSource = "";
@@ -132,11 +149,6 @@ public class Utils {
         return pageSource.equals(AppDriver.getDriver().getPageSource());
     }
 
-	
-
-
-	
-    
  */  
     
 }

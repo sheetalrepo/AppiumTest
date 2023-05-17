@@ -3,6 +3,11 @@ package demo;
 import java.io.File;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
+/*
+ * As per Java-client 8
+ * Appium 2
+ * 
+ */
 public class A0_UiAutomator2Options {
 
 	public UiAutomator2Options getApiDemoApkOptions() {
@@ -66,6 +71,22 @@ public class A0_UiAutomator2Options {
 			.setAppActivity(".MainActivity")
 			.setApp(apkPath) // Optional, Drag n Drop can also be used
 			.setNoReset(false); //true: Will not install app if its already present
+		return options;
+	}
+	
+	
+	
+	public UiAutomator2Options getChromeOptions() {
+		System.out.println("-------- Started: Chrome Browser ----------");
+
+		UiAutomator2Options options = new UiAutomator2Options();
+		options
+			.setPlatformName("Android")
+			.setPlatformVersion("8.1")
+			.setAutomationName("UiAutomator2")
+			.setDeviceName("emulator-5554")
+			.noReset()
+			.withBrowserName("Chrome");
 		return options;
 	}
 }
