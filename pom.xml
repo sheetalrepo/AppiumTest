@@ -24,7 +24,14 @@
 			<artifactId>selenium-support</artifactId>
 			<version>4.9.0</version>
 		</dependency>
-<!--
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.9.1</version>
+		</dependency>
+
+		<!--
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-api</artifactId>
@@ -62,14 +69,17 @@
 	<build>
 		<plugins>
 
-			<!-- report get generated at target > surefire-reports > index.html -->
+			<!-- 
+			mvn clean test -DsuiteXmlFile=abc.xml
+			mvn clean test -DsuiteXmlFile=src/test/resources/suites/abc.xml
+			report get generated at target > surefire-reports > index.html 
+			-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0</version>
 				<configuration>
 					<suiteXmlFiles>
-						<!--run: mvn clean test -DsuiteXmlFile=src/test/resources/suites/criticaltest.xml -->
 						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
