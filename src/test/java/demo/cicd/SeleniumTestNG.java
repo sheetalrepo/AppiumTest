@@ -18,6 +18,10 @@ import org.testng.annotations.Test;
  * mvn clean test -DsuiteXmlFile=seleniumTestNG.xml
  * Report : target/surefire-reports/index.html
  * 
+ * 
+ * Jenkin:
+ * Chrome will not open from Jenkin
+ * Test will pass
  */
 public class SeleniumTestNG {
 	
@@ -25,11 +29,7 @@ public class SeleniumTestNG {
 	
 	@BeforeClass
 	public void init() {
-		//ChromeOptions options = new ChromeOptions();
-		//options.setHeadless(true);
-		//driver = new ChromeDriver(options);
-		
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(); 
 	}
 	
 	@Test

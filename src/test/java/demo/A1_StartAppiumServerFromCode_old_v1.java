@@ -12,7 +12,10 @@ import io.appium.java_client.service.local.flags.GeneralServerFlag;
 
 
 /*
- * This class is for Appium v1
+ * 
+ * 
+ * This class is for Appium v1 + Java-client 8  (NOT WORKING)
+ * Refer AppiumApp Project A1_StartAppiumServerFromCode7.java
  * Welcome to Appium v1.22.3
  * 
  * Close Appium Server GUI, Restart Emulator
