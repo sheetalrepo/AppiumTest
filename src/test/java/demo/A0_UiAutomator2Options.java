@@ -28,7 +28,7 @@ public class A0_UiAutomator2Options {
 			.setAppActivity(".ApiDemos")
 
 			.setApp(apkPath) // Optional, Drag n Drop can also be used
-			.setNoReset(true); // true: Will not install app if its already present
+			.setNoReset(false); // true: Will not install app if its already present
 
 		return options;
 	}

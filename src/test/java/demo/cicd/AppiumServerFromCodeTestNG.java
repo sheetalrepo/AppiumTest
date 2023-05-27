@@ -1,7 +1,15 @@
-package demo;
+package demo.cicd;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import demo.A0_UiAutomator2Options;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import java.io.File;
@@ -15,11 +23,49 @@ import io.appium.java_client.service.local.flags.GeneralServerFlag;
  * 
  * This class is for Appium v1
  * [Appium] Welcome to Appium v2.0.0-beta.66
+ * 
+ * 
+ * 
+ * mvn clean test -DsuiteXmlFile=appiumTestNG.xml
+ * Report : target/surefire-reports/index.html
+ * 
  */
-public class A3_AppiumServerFromCode {
+public class AppiumServerFromCodeTestNG {
 
 	static AppiumDriverLocalService server;
 	static AndroidDriver driver;
+	
+	@BeforeClass
+	public void init() throws MalformedURLException {
+		//Start Appium Server
+		AppiumServerFromCodeTestNG.startAppiumServer();
+		
+		//Initialise Driver
+		A0_UiAutomator2Options options = new A0_UiAutomator2Options();
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options.getSauceLabApkOptions());
+	}
+	
+	@AfterClass
+	public void closeAll() {
+		AppiumServerFromCodeTestNG.stopAppiumServer();
+		System.out.println("---------- Appium Run Finished ----------");
+	}
+	
+	
+	public static void startAppiumServer() {
+		getInstance().start();
+		System.out.println("---------- Starting Appium Server ----------");
+		System.out.println("URL: " + server.getUrl());
+		System.out.println("is Server Running: " + server.isRunning());
+	}
+	
+
+	static AppiumDriverLocalService getInstance() {
+		if (server == null) {
+			setInstance();
+		}
+		return server;
+	}
 
 	static void setInstance() {
 		String nodeJSMainPath = "C:\\Users\\cmash\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js";
@@ -38,20 +84,6 @@ public class A3_AppiumServerFromCode {
 		server = AppiumDriverLocalService.buildService(builder);
 	}
 
-	static AppiumDriverLocalService getInstance() {
-		if (server == null) {
-			setInstance();
-		}
-		return server;
-	}
-
-	public static void startAppiumServer() {
-		getInstance().start();
-		System.out.println("---------- Starting Appium Server ----------");
-		System.out.println("URL: " + server.getUrl());
-		System.out.println("is Server Running: " + server.isRunning());
-	}
-
 	public static void stopAppiumServer() {
 		if (server != null) {
 			getInstance().stop();
@@ -59,8 +91,12 @@ public class A3_AppiumServerFromCode {
 		System.out.println("---- Stopped Appium Server----");
 	}
 
+
 	// App > Activity > Animation > Back to home page
+	@Test
 	public void testSaucelabBasicFlow() throws InterruptedException {
+		System.out.println("Starting Appium Test on CICD...");
+		
 		driver.findElement(AppiumBy.accessibilityId("open menu")).click();
 		Thread.sleep(1000L);
 		driver.findElement(AppiumBy.accessibilityId("menu item log in")).click();
@@ -73,20 +109,8 @@ public class A3_AppiumServerFromCode {
 		
 		Thread.sleep(1000L);
 		driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc='Login button']")).click();
-	}
-
-	public static void main(String[] args) throws MalformedURLException, InterruptedException {
-		A3_AppiumServerFromCode.startAppiumServer();
-
-		A0_UiAutomator2Options options = new A0_UiAutomator2Options();
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options.getSauceLabApkOptions());
-
-		A3_AppiumServerFromCode obj = new A3_AppiumServerFromCode();
-		obj.testSaucelabBasicFlow();
-
-		A3_AppiumServerFromCode.stopAppiumServer();
-
-		System.out.println("---------- Run Finished ----------");
+		
+		System.out.println("Test Complete : Appium Test CICD !!!");
 	}
 
 }

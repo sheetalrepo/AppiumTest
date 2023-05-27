@@ -12,19 +12,18 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
-
 	<dependencies>
 		<dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
-			<version>8.3.0</version>
+			<version>8.5.0</version>  <!-- 8.3.0-->
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-support</artifactId>
 			<version>4.9.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
