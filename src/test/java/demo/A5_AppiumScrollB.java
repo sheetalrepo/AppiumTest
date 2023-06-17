@@ -1,10 +1,6 @@
 package demo;
 
 import java.net.MalformedURLException;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import demo.helper.AppDriver;
@@ -18,21 +14,21 @@ import demo.helper.Utils;
  * 
  * functionally same as previous class
  */
-public class A4_AppiumScrollC {
+public class A5_AppiumScrollB {
 
 	static AppiumDriver driver; 
 
-	
-	/*
-	 * Scroll till Element found
-	 */
-	public static void swipeTill() throws InterruptedException {
+	public static void swipeMe() throws InterruptedException {
 		AppDriver.getDriver().findElement(AppiumBy.accessibilityId("Swipe")).click();	
 		Thread.sleep(4000);
-		
-		By elementToFind = By.xpath("//android.widget.TextView[@text='EXTENDABLE']");
-		Utils.scrollTill(elementToFind);
-		AppDriver.getDriver().findElement(elementToFind).click();
+		//Move page towards Right
+		Utils.scroll("RIGHT", 0.5);
+		Thread.sleep(2000);
+		Utils.scroll("RIGHT", 0.5);
+		Thread.sleep(2000);
+		Utils.scroll("LEFT", 0.5);
+		Thread.sleep(2000);
+		Utils.scroll("DOWN", 0.8);
 	}
 	
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
@@ -43,7 +39,7 @@ public class A4_AppiumScrollC {
 		AppFactory.androidLaunchApp(option.getOptions("app3"));
 		
 		//method
-		swipeTill();
+		swipeMe();
 		
 		System.out.println("---------- Run Finished ----------");
 	}

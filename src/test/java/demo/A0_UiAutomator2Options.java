@@ -7,6 +7,12 @@ import io.appium.java_client.android.options.UiAutomator2Options;
  * As per Java-client 8
  * Appium 2
  * 
+ * adb devices
+ * adb shell getprop ro.build.version.release        
+ * adb shell dumpsys window windows | grep mFocusedApp
+ * 
+ * 
+ * 
  */
 public class A0_UiAutomator2Options {
 
@@ -16,6 +22,7 @@ public class A0_UiAutomator2Options {
 		File file = new File(classLoader.getResource("builds/A_ApiDemos-debug.apk").getFile());
 		String apkPath = file.getAbsolutePath();
 
+		
 		UiAutomator2Options options = new UiAutomator2Options();
 		options
 			.setPlatformName("Android")

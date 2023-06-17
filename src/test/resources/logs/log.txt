@@ -1,684 +1,311 @@
-2023-05-02 17:41:03:901 [Appium] Welcome to Appium v1.22.3
-2023-05-02 17:41:03:902 [Appium] Non-default server args:
-2023-05-02 17:41:03:902 [Appium]   address: 127.0.0.1
-2023-05-02 17:41:03:902 [Appium]   basePath: /wd/hub/
-2023-05-02 17:41:03:902 [Appium]   logFile: C:\Users\cmash\Documents\Papi\Repo\AppiumTest\src\test\resources\logs\log.txt
-2023-05-02 17:41:03:930 [Appium] Appium REST http interface listener started on 127.0.0.1:4723
-2023-05-02 17:41:04:237 [HTTP] --> GET /wd/hub/status
-2023-05-02 17:41:04:238 [HTTP] {}
-2023-05-02 17:41:04:239 [GENERIC] Calling AppiumDriver.getStatus() with args: []
-2023-05-02 17:41:04:239 [GENERIC] Responding to client with driver.getStatus() result: {"build":{"version":"1.22.3"}}
-2023-05-02 17:41:04:244 [HTTP] <-- GET /wd/hub/status 200 5 ms - 68
-2023-05-02 17:41:04:245 [HTTP] 
-2023-05-02 17:41:04:935 [HTTP] Request idempotency key: a4fe666f-bf04-4211-915e-f61ace3b1422
-2023-05-02 17:41:04:948 [HTTP] --> POST /wd/hub/session
-2023-05-02 17:41:04:948 [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:appActivity":".ApiDemos","appium:appPackage":"io.appium.android.apis","appium:automationName":"UIAutomator2","appium:deviceName":"emulator-5554","appium:platformVersion":"8.1","platformName":"ANDROID"}}}
-2023-05-02 17:41:04:949 [W3C] Calling AppiumDriver.createSession() with args: [null,null,{"firstMatch":[{}],"alwaysMatch":{"appium:appActivity":".ApiDemos","appium:appPackage":"io.appium.android.apis","appium:automationName":"UIAutomator2","appium:deviceName":"emulator-5554","appium:platformVersion":"8.1","platformName":"ANDROID"}}]
-2023-05-02 17:41:04:949 [BaseDriver] Event 'newSessionRequested' logged at 1683049264949 (19:41:04 GMT+0200 (Central European Summer Time))
-2023-05-02 17:41:05:168 [Appium] Appium v1.22.3 creating new AndroidUiautomator2Driver (v1.70.1) session
-2023-05-02 17:41:05:170 [BaseDriver] Creating session with W3C capabilities: {
-2023-05-02 17:41:05:170 [BaseDriver]   "alwaysMatch": {
-2023-05-02 17:41:05:170 [BaseDriver]     "platformName": "ANDROID",
-2023-05-02 17:41:05:170 [BaseDriver]     "appium:appActivity": ".ApiDemos",
-2023-05-02 17:41:05:170 [BaseDriver]     "appium:appPackage": "io.appium.android.apis",
-2023-05-02 17:41:05:170 [BaseDriver]     "appium:automationName": "UIAutomator2",
-2023-05-02 17:41:05:171 [BaseDriver]     "appium:deviceName": "emulator-5554",
-2023-05-02 17:41:05:171 [BaseDriver]     "appium:platformVersion": "8.1"
-2023-05-02 17:41:05:171 [BaseDriver]   },
-2023-05-02 17:41:05:171 [BaseDriver]   "firstMatch": [
-2023-05-02 17:41:05:171 [BaseDriver]     {}
-2023-05-02 17:41:05:171 [BaseDriver]   ]
-2023-05-02 17:41:05:171 [BaseDriver] }
-2023-05-02 17:41:05:175 [BaseDriver] Session created with session id: 321c961c-e167-4342-80ed-75c056f68525
-2023-05-02 17:41:05:175 [UiAutomator2] Starting 'io.appium.android.apis' directly on the device
-2023-05-02 17:41:05:190 [ADB] Found 2 'build-tools' folders under 'C:\Users\cmash\AppData\Local\Android\Sdk' (newest first):
-2023-05-02 17:41:05:190 [ADB]     C:/Users/cmash/AppData/Local/Android/Sdk/build-tools/33.0.2
-2023-05-02 17:41:05:190 [ADB]     C:/Users/cmash/AppData/Local/Android/Sdk/build-tools/30.0.3
-2023-05-02 17:41:05:190 [ADB] Using 'adb.exe' from 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe'
-2023-05-02 17:41:05:191 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 start-server'
-2023-05-02 17:41:05:220 [AndroidDriver] Retrieving device list
-2023-05-02 17:41:05:220 [ADB] Trying to find a connected android device
-2023-05-02 17:41:05:221 [ADB] Getting connected devices
-2023-05-02 17:41:05:308 [ADB] Connected devices: [{"udid":"emulator-5554","state":"device"}]
-2023-05-02 17:41:05:308 [AndroidDriver] Looking for a device with Android '8.1.0'
-2023-05-02 17:41:05:308 [ADB] Setting device id to emulator-5554
-2023-05-02 17:41:05:308 [ADB] Getting device platform version
-2023-05-02 17:41:05:308 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell getprop ro.build.version.release'
-2023-05-02 17:41:05:401 [ADB] Current device property 'ro.build.version.release': 8.1.0
-2023-05-02 17:41:05:402 [AndroidDriver] Using device: emulator-5554
-2023-05-02 17:41:05:403 [ADB] Using 'adb.exe' from 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe'
-2023-05-02 17:41:05:403 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 start-server'
-2023-05-02 17:41:05:443 [ADB] Setting device id to emulator-5554
-2023-05-02 17:41:05:443 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell getprop ro.build.version.sdk'
-2023-05-02 17:41:05:506 [ADB] Current device property 'ro.build.version.sdk': 27
-2023-05-02 17:41:05:506 [ADB] Device API level: 27
-2023-05-02 17:41:05:506 [AndroidDriver] No app sent in, not parsing package/activity
-2023-05-02 17:41:05:507 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 wait-for-device'
-2023-05-02 17:41:05:546 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell echo ping'
-2023-05-02 17:41:05:598 [AndroidDriver] Pushing settings apk to device...
-2023-05-02 17:41:05:598 [ADB] Getting install status for io.appium.settings
-2023-05-02 17:41:05:598 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings'
-2023-05-02 17:41:05:696 [ADB] 'io.appium.settings' is installed
-2023-05-02 17:41:05:696 [ADB] Getting package info for 'io.appium.settings'
-2023-05-02 17:41:05:697 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings'
-2023-05-02 17:41:05:757 [ADB] The version name of the installed 'io.appium.settings' is greater or equal to the application version name ('3.4.0' >= '3.4.0')
-2023-05-02 17:41:05:757 [ADB] There is no need to install/upgrade 'C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\io.appium.settings\apks\settings_apk-debug.apk'
-2023-05-02 17:41:05:757 [ADB] Getting IDs of all 'io.appium.settings' processes
-2023-05-02 17:41:05:758 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell 'pgrep --help; echo $?''
-2023-05-02 17:41:05:794 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pgrep -f \(\[\[:blank:\]\]\|\^\)io\.appium\.settings\(\[\[:blank:\]\]\|\$\)'
-2023-05-02 17:41:05:846 [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
-2023-05-02 17:41:05:847 [Logcat] Starting logs capture with command: C:\\Users\\cmash\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 logcat -v threadtime
-2023-05-02 17:41:06:050 [UiAutomator2] Forwarding UiAutomator2 Server port 6790 to local port 8204
-2023-05-02 17:41:06:051 [ADB] Forwarding system: 8204 to device: 6790
-2023-05-02 17:41:06:052 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 forward tcp:8204 tcp:6790'
-2023-05-02 17:41:06:110 [ADB] Getting install status for io.appium.uiautomator2.server
-2023-05-02 17:41:06:110 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server'
-2023-05-02 17:41:06:178 [ADB] 'io.appium.uiautomator2.server' is installed
-2023-05-02 17:41:06:178 [ADB] Getting package info for 'io.appium.uiautomator2.server'
-2023-05-02 17:41:06:178 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server'
-2023-05-02 17:41:06:359 [ADB] The version name of the installed 'io.appium.uiautomator2.server' is greater or equal to the application version name ('4.27.0' >= '4.27.0')
-2023-05-02 17:41:06:360 [UiAutomator2] io.appium.uiautomator2.server installation state: sameVersionInstalled
-2023-05-02 17:41:06:360 [ADB] Checking app cert for C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v4.27.0.apk
-2023-05-02 17:41:06:378 [ADB] Using 'apksigner.jar' from 'C:\Users\cmash\AppData\Local\Android\Sdk\build-tools\33.0.2\lib\apksigner.jar'
-2023-05-02 17:41:06:379 [ADB] Starting apksigner: 'C:\\Program Files\\Java\\jdk-18.0.2\\bin\\java.exe' -Xmx1024M -Xss1m -jar C:\\Users\\cmash\\AppData\\Local\\Android\\Sdk\\build-tools\\33.0.2\\lib\\apksigner.jar verify --print-certs C:\\Users\\cmash\\Downloads\\Appium-Desktop\\resources\\app\\node_modules\\appium\\node_modules\\appium-uiautomator2-server\\apks\\appium-uiautomator2-server-v4.27.0.apk
-2023-05-02 17:41:06:927 [ADB] apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
-2023-05-02 17:41:06:927 [ADB] Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
-2023-05-02 17:41:06:927 [ADB] Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
-2023-05-02 17:41:06:927 [ADB] Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
-2023-05-02 17:41:06:927 [ADB] 
-2023-05-02 17:41:06:927 [ADB] sha256 hash did match for 'appium-uiautomator2-server-v4.27.0.apk'
-2023-05-02 17:41:06:927 [ADB] 'C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v4.27.0.apk' is signed with the default certificate
-2023-05-02 17:41:06:927 [ADB] Getting install status for io.appium.uiautomator2.server.test
-2023-05-02 17:41:06:928 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server.test'
-2023-05-02 17:41:06:967 [ADB] 'io.appium.uiautomator2.server.test' is installed
-2023-05-02 17:41:06:967 [ADB] Checking app cert for C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk
-2023-05-02 17:41:06:969 [ADB] Starting apksigner: 'C:\\Program Files\\Java\\jdk-18.0.2\\bin\\java.exe' -Xmx1024M -Xss1m -jar C:\\Users\\cmash\\AppData\\Local\\Android\\Sdk\\build-tools\\33.0.2\\lib\\apksigner.jar verify --print-certs C:\\Users\\cmash\\Downloads\\Appium-Desktop\\resources\\app\\node_modules\\appium\\node_modules\\appium-uiautomator2-server\\apks\\appium-uiautomator2-server-debug-androidTest.apk
-2023-05-02 17:41:07:249 [ADB] apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
-2023-05-02 17:41:07:249 [ADB] Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
-2023-05-02 17:41:07:249 [ADB] Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
-2023-05-02 17:41:07:249 [ADB] Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
-2023-05-02 17:41:07:249 [ADB] 
-2023-05-02 17:41:07:250 [ADB] sha256 hash did match for 'appium-uiautomator2-server-debug-androidTest.apk'
-2023-05-02 17:41:07:250 [ADB] 'C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk' is signed with the default certificate
-2023-05-02 17:41:07:250 [UiAutomator2] Server packages are not going to be (re)installed
-2023-05-02 17:41:07:252 [UiAutomator2] Waiting up to 30000ms for services to be available
-2023-05-02 17:41:07:252 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pm list instrumentation'
-2023-05-02 17:41:07:468 [UiAutomator2] Instrumentation target 'io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner' is available
-2023-05-02 17:41:07:470 [ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
-2023-05-02 17:41:07:470 [ADB] Got the following command chunks to execute: [["dumpsys","deviceidle","whitelist","+io.appium.settings",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server.test",";"]]
-2023-05-02 17:41:07:470 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys deviceidle whitelist +io.appium.settings ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server.test ;'
-2023-05-02 17:41:07:526 [UiAutomator2] No app capability. Assuming it is already on the device
-2023-05-02 17:41:07:526 [ADB] Getting install status for io.appium.android.apis
-2023-05-02 17:41:07:526 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.android.apis'
-2023-05-02 17:41:07:614 [ADB] 'io.appium.android.apis' is installed
-2023-05-02 17:41:07:614 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am force-stop io.appium.android.apis'
-2023-05-02 17:41:07:715 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pm clear io.appium.android.apis'
-2023-05-02 17:41:07:993 [AndroidDriver] Performed fast reset on the installed 'io.appium.android.apis' application (stop and clear)
-2023-05-02 17:41:07:993 [UiAutomator2] Performing shallow cleanup of automation leftovers
-2023-05-02 17:41:08:024 [UiAutomator2] The following obsolete sessions are still running: ["d59b367d-a36e-46b6-852d-d92119ac17ae"]
-2023-05-02 17:41:08:026 [UiAutomator2] Cleaning up 1 obsolete session
-2023-05-02 17:41:09:050 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am force-stop io.appium.uiautomator2.server.test'
-2023-05-02 17:41:09:090 [UiAutomator2] Starting UIAutomator2 server 4.27.0
-2023-05-02 17:41:09:090 [UiAutomator2] Using UIAutomator2 server from 'C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v4.27.0.apk' and test from 'C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
-2023-05-02 17:41:09:090 [UiAutomator2] Waiting up to 30000ms for UiAutomator2 to be online...
-2023-05-02 17:41:09:090 [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","emulator-5554","shell","am","instrument","-w","-e","disableAnalytics",true,"io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner"]
-2023-05-02 17:41:09:096 [WD Proxy] Matched '/status' to command name 'getStatus'
-2023-05-02 17:41:09:097 [WD Proxy] Proxying [GET /status] to [GET http://127.0.0.1:8204/wd/hub/status] with no body
-2023-05-02 17:41:09:100 [WD Proxy] socket hang up
-2023-05-02 17:41:09:473 [HTTP] --> GET /wd/hub/session/2e123140-c39e-4a1f-9e74-ef88b45d673b/timeouts
-2023-05-02 17:41:09:473 [HTTP] {}
-2023-05-02 17:41:09:489 [GENERIC (2e123140)] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
-2023-05-02 17:41:09:489 [GENERIC (2e123140)]     at asyncHandler (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:243:15)
-2023-05-02 17:41:09:489 [GENERIC (2e123140)]     at C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:423:15
-2023-05-02 17:41:09:490 [GENERIC (2e123140)]     at Layer.handle [as handle_request] (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
-2023-05-02 17:41:09:490 [GENERIC (2e123140)]     at next (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\route.js:137:13)
-2023-05-02 17:41:09:490 [GENERIC (2e123140)]     at Route.dispatch (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\route.js:112:3)
-2023-05-02 17:41:09:490 [GENERIC (2e123140)]     at Layer.handle [as handle_request] (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
-2023-05-02 17:41:09:490 [GENERIC (2e123140)]     at C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:281:22
-2023-05-02 17:41:09:490 [GENERIC (2e123140)]     at param (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:354:14)
-2023-05-02 17:41:09:490 [GENERIC (2e123140)]     at param (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
-2023-05-02 17:41:09:490 [GENERIC (2e123140)]     at Function.process_params (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:410:3)
-2023-05-02 17:41:09:490 [GENERIC (2e123140)]     at next (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
-2023-05-02 17:41:09:490 [GENERIC (2e123140)]     at logger (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\morgan\index.js:144:5)
-2023-05-02 17:41:09:490 [GENERIC (2e123140)]     at Layer.handle [as handle_request] (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
-2023-05-02 17:41:09:490 [GENERIC (2e123140)]     at trim_prefix (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:317:13)
-2023-05-02 17:41:09:490 [GENERIC (2e123140)]     at C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:284:7
-2023-05-02 17:41:09:490 [GENERIC (2e123140)]     at Function.process_params (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:335:12)
-2023-05-02 17:41:09:492 [HTTP] <-- GET /wd/hub/session/2e123140-c39e-4a1f-9e74-ef88b45d673b/timeouts 404 19 ms - 2778
-2023-05-02 17:41:09:492 [HTTP] 
-2023-05-02 17:41:09:734 [Instrumentation] io.appium.uiautomator2.server.test.AppiumUiAutomator2Server:
-2023-05-02 17:41:10:108 [WD Proxy] Matched '/status' to command name 'getStatus'
-2023-05-02 17:41:10:108 [WD Proxy] Proxying [GET /status] to [GET http://127.0.0.1:8204/wd/hub/status] with no body
-2023-05-02 17:41:10:111 [WD Proxy] socket hang up
-2023-05-02 17:41:11:112 [WD Proxy] Matched '/status' to command name 'getStatus'
-2023-05-02 17:41:11:113 [WD Proxy] Proxying [GET /status] to [GET http://127.0.0.1:8204/wd/hub/status] with no body
-2023-05-02 17:41:11:183 [WD Proxy] Got response with status 200: {"sessionId":"None","value":{"message":"UiAutomator2 Server is ready to accept commands","ready":true}}
-2023-05-02 17:41:11:183 [UiAutomator2] The initialization of the instrumentation process took 2093ms
-2023-05-02 17:41:11:183 [WD Proxy] Matched '/session' to command name 'createSession'
-2023-05-02 17:41:11:184 [WD Proxy] Proxying [POST /session] to [POST http://127.0.0.1:8204/wd/hub/session] with body: {"capabilities":{"firstMatch":[{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"ANDROID","appActivity":".ApiDemos","appPackage":"io.appium.android.apis","automationName":"UIAutomator2","deviceName":"emulator-5554","platformVersion":"8.1"},"platformName":"ANDROID","appActivity":".ApiDemos","appPackage":"io.appium.android.apis","automationName":"UIAutomator2","deviceName":"emulator-5554","platformVersion":"8.1","deviceUDID":"emulator-5554"}],"alwaysMatch":{}}}
-2023-05-02 17:41:11:212 [WD Proxy] Got response with status 200: {"sessionId":"f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf","value":{"capabilities":{"firstMatch":[{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"ANDROID","appActivity":".ApiDemos","appPackage":"io.appium.android.apis","automationName":"UIAutomator2","deviceName":"emulator-5554","platformVersion":"8.1"},"platformName":"ANDROID","appActivity":".ApiDemos","appPackage":"io.appium.android.apis","automationName":"UIAutomator2","deviceName":"emulator-5554","platformVersion":"8.1","deviceUDID":"emulator-5554"}],"alwaysMatch":{}},"sessionId":"f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf"}}
-2023-05-02 17:41:11:212 [WD Proxy] Determined the downstream protocol as 'W3C'
-2023-05-02 17:41:11:222 [WD Proxy] Proxying [GET /appium/device/info] to [GET http://127.0.0.1:8204/wd/hub/session/f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf/appium/device/info] with no body
-2023-05-02 17:41:11:289 [WD Proxy] Got response with status 200: {"sessionId":"f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf","value":{"androidId":"dd65ef14e70eaef9","apiVersion":"27","bluetooth":null,"brand":"google","carrierName":"Android","displayDensity":440,"locale":"en_US","manufacturer":"Google","model":"Android SDK built for x86","networks":[{"capabilities":{"SSID":null,"linkDownBandwidthKbps":102400,"linkUpstreamBandwidthKbps":51200,"networkCapabilities":"NET_CAPABILITY_MMS,NET_CAPABILITY_SUPL,NET_CAPABILITY_DUN,NET_CAPABILITY_FOTA,NET_CAPABILITY_IMS,NET_CAPABILITY_CBS,NET_CAPABILITY_IA,NET_CAPABILITY_INTERNET,NET_CAPABILITY_NOT_RESTRICTED,NET_CAPABILITY_TRUSTED,NET_CAPABILITY_NOT_VPN,NET_CAPABILITY_VALIDATED","signalStrength":-2147483648,"transportTypes":"TRANSPORT_CELLULAR"},"detailedState":"CONNECTED","extraInfo":"epc.tmobile.com","isAvailable":true,"isConnected":true,"isFailover":false,"isRoaming":false,"state":"CONNECTED","subtype":13,"subtypeName":"LTE","type":0,"typeName":"MOBILE"},{"capabilities":{"SSID":null,"linkDownBandwidthKbps":1048576,"linkUpstreamBandwidt...
-2023-05-02 17:41:11:289 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys window'
-2023-05-02 17:41:11:328 [AndroidDriver] Screen already unlocked, doing nothing
-2023-05-02 17:41:11:329 [UiAutomator2] Starting 'io.appium.android.apis/.ApiDemos and waiting for 'io.appium.android.apis/.ApiDemos'
-2023-05-02 17:41:11:329 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am start -W -n io.appium.android.apis/.ApiDemos -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000'
-2023-05-02 17:41:12:062 [WD Proxy] Proxying [GET /appium/device/pixel_ratio] to [GET http://127.0.0.1:8204/wd/hub/session/f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf/appium/device/pixel_ratio] with no body
-2023-05-02 17:41:12:073 [WD Proxy] Got response with status 200: {"sessionId":"f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf","value":2.75}
-2023-05-02 17:41:12:074 [WD Proxy] Matched '/appium/device/system_bars' to command name 'getSystemBars'
-2023-05-02 17:41:12:074 [WD Proxy] Proxying [GET /appium/device/system_bars] to [GET http://127.0.0.1:8204/wd/hub/session/f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf/appium/device/system_bars] with no body
-2023-05-02 17:41:12:082 [WD Proxy] Got response with status 200: {"sessionId":"f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf","value":{"statusBar":66}}
-2023-05-02 17:41:12:082 [WD Proxy] Matched '/window/current/size' to command name 'getWindowSize'
-2023-05-02 17:41:12:082 [WD Proxy] Proxying [GET /window/current/size] to [GET http://127.0.0.1:8204/wd/hub/session/f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf/window/current/size] with no body
-2023-05-02 17:41:12:092 [WD Proxy] Got response with status 200: {"sessionId":"f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf","value":{"height":2148,"width":1080}}
-2023-05-02 17:41:12:093 [Appium] New AndroidUiautomator2Driver session created successfully, session 321c961c-e167-4342-80ed-75c056f68525 added to master session list
-2023-05-02 17:41:12:093 [BaseDriver] Event 'newSessionStarted' logged at 1683049272093 (19:41:12 GMT+0200 (Central European Summer Time))
-2023-05-02 17:41:12:093 [W3C (321c961c)] Cached the protocol value 'W3C' for the new session 321c961c-e167-4342-80ed-75c056f68525
-2023-05-02 17:41:12:094 [W3C (321c961c)] Responding to client with driver.createSession() result: {"capabilities":{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"ANDROID","appActivity":".ApiDemos","appPackage":"io.appium.android.apis","automationName":"UIAutomator2","deviceName":"emulator-5554","platformVersion":"8.1"},"platformName":"ANDROID","appActivity":".ApiDemos","appPackage":"io.appium.android.apis","automationName":"UIAutomator2","deviceName":"emulator-5554","platformVersion":"8.1.0","deviceUDID":"emulator-5554","deviceApiLevel":27,"deviceScreenSize":"1080x2280","deviceScreenDensity":440,"deviceModel":"Android SDK built for x86","deviceManufacturer":"Google","pixelRatio":2.75,"statBarHeight":66,"viewportRect":{"left":0,"top":66,"width":1080,"height":2082}}}
-2023-05-02 17:41:12:095 [HTTP] <-- POST /wd/hub/session 200 7147 ms - 912
-2023-05-02 17:41:12:095 [HTTP] 
-2023-05-02 17:41:12:176 [HTTP] --> POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/element
-2023-05-02 17:41:12:176 [HTTP] {"using":"xpath","value":"//android.widget.TextView[@content-desc='App']"}
-2023-05-02 17:41:12:178 [W3C (321c961c)] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.TextView[@content-desc='App']","321c961c-e167-4342-80ed-75c056f68525"]
-2023-05-02 17:41:12:179 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, css selector, -android uiautomator
-2023-05-02 17:41:12:179 [BaseDriver] Waiting up to 0 ms for condition
-2023-05-02 17:41:12:180 [WD Proxy] Matched '/element' to command name 'findElement'
-2023-05-02 17:41:12:180 [WD Proxy] Proxying [POST /element] to [POST http://127.0.0.1:8204/wd/hub/session/f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf/element] with body: {"strategy":"xpath","selector":"//android.widget.TextView[@content-desc='App']","context":"","multiple":false}
-2023-05-02 17:41:13:418 [WD Proxy] Got response with status 200: {"sessionId":"f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf","value":{"ELEMENT":"00000000-0000-04ef-ffff-ffff00000007","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-04ef-ffff-ffff00000007"}}
-2023-05-02 17:41:13:418 [W3C (321c961c)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-04ef-ffff-ffff00000007","ELEMENT":"00000000-0000-04ef-ffff-ffff00000007"}
-2023-05-02 17:41:13:419 [HTTP] <-- POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/element 200 1243 ms - 137
-2023-05-02 17:41:13:419 [HTTP] 
-2023-05-02 17:41:13:424 [HTTP] --> POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/element/00000000-0000-04ef-ffff-ffff00000007/click
-2023-05-02 17:41:13:424 [HTTP] {"id":"00000000-0000-04ef-ffff-ffff00000007"}
-2023-05-02 17:41:13:427 [W3C (321c961c)] Calling AppiumDriver.click() with args: ["00000000-0000-04ef-ffff-ffff00000007","321c961c-e167-4342-80ed-75c056f68525"]
-2023-05-02 17:41:13:428 [WD Proxy] Matched '/element/00000000-0000-04ef-ffff-ffff00000007/click' to command name 'click'
-2023-05-02 17:41:13:428 [WD Proxy] Proxying [POST /element/00000000-0000-04ef-ffff-ffff00000007/click] to [POST http://127.0.0.1:8204/wd/hub/session/f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf/element/00000000-0000-04ef-ffff-ffff00000007/click] with body: {"element":"00000000-0000-04ef-ffff-ffff00000007"}
-2023-05-02 17:41:14:542 [WD Proxy] Got response with status 200: {"sessionId":"f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf","value":null}
-2023-05-02 17:41:14:542 [W3C (321c961c)] Responding to client with driver.click() result: null
-2023-05-02 17:41:14:543 [HTTP] <-- POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/element/00000000-0000-04ef-ffff-ffff00000007/click 200 1118 ms - 14
-2023-05-02 17:41:14:543 [HTTP] 
-2023-05-02 17:41:14:547 [HTTP] --> POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/element
-2023-05-02 17:41:14:547 [HTTP] {"using":"xpath","value":"//android.widget.TextView[@content-desc='Activity']"}
-2023-05-02 17:41:14:548 [W3C (321c961c)] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.TextView[@content-desc='Activity']","321c961c-e167-4342-80ed-75c056f68525"]
-2023-05-02 17:41:14:548 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, css selector, -android uiautomator
-2023-05-02 17:41:14:548 [BaseDriver] Waiting up to 0 ms for condition
-2023-05-02 17:41:14:551 [WD Proxy] Matched '/element' to command name 'findElement'
-2023-05-02 17:41:14:551 [WD Proxy] Proxying [POST /element] to [POST http://127.0.0.1:8204/wd/hub/session/f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf/element] with body: {"strategy":"xpath","selector":"//android.widget.TextView[@content-desc='Activity']","context":"","multiple":false}
-2023-05-02 17:41:14:613 [WD Proxy] Got response with status 200: {"sessionId":"f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf","value":{"ELEMENT":"00000000-0000-04f0-ffff-ffff0000001a","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-04f0-ffff-ffff0000001a"}}
-2023-05-02 17:41:14:614 [W3C (321c961c)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-04f0-ffff-ffff0000001a","ELEMENT":"00000000-0000-04f0-ffff-ffff0000001a"}
-2023-05-02 17:41:14:614 [HTTP] <-- POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/element 200 67 ms - 137
-2023-05-02 17:41:14:614 [HTTP] 
-2023-05-02 17:41:14:617 [HTTP] --> POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/element/00000000-0000-04f0-ffff-ffff0000001a/click
-2023-05-02 17:41:14:618 [HTTP] {"id":"00000000-0000-04f0-ffff-ffff0000001a"}
-2023-05-02 17:41:14:618 [W3C (321c961c)] Calling AppiumDriver.click() with args: ["00000000-0000-04f0-ffff-ffff0000001a","321c961c-e167-4342-80ed-75c056f68525"]
-2023-05-02 17:41:14:619 [WD Proxy] Matched '/element/00000000-0000-04f0-ffff-ffff0000001a/click' to command name 'click'
-2023-05-02 17:41:14:620 [WD Proxy] Proxying [POST /element/00000000-0000-04f0-ffff-ffff0000001a/click] to [POST http://127.0.0.1:8204/wd/hub/session/f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf/element/00000000-0000-04f0-ffff-ffff0000001a/click] with body: {"element":"00000000-0000-04f0-ffff-ffff0000001a"}
-2023-05-02 17:41:15:704 [WD Proxy] Got response with status 200: {"sessionId":"f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf","value":null}
-2023-05-02 17:41:15:705 [W3C (321c961c)] Responding to client with driver.click() result: null
-2023-05-02 17:41:15:705 [HTTP] <-- POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/element/00000000-0000-04f0-ffff-ffff0000001a/click 200 1087 ms - 14
-2023-05-02 17:41:15:706 [HTTP] 
-2023-05-02 17:41:15:709 [HTTP] --> POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/element
-2023-05-02 17:41:15:709 [HTTP] {"using":"xpath","value":"//android.widget.TextView[@content-desc='Animation']"}
-2023-05-02 17:41:15:709 [W3C (321c961c)] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.TextView[@content-desc='Animation']","321c961c-e167-4342-80ed-75c056f68525"]
-2023-05-02 17:41:15:710 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, css selector, -android uiautomator
-2023-05-02 17:41:15:710 [BaseDriver] Waiting up to 0 ms for condition
-2023-05-02 17:41:15:712 [WD Proxy] Matched '/element' to command name 'findElement'
-2023-05-02 17:41:15:713 [WD Proxy] Proxying [POST /element] to [POST http://127.0.0.1:8204/wd/hub/session/f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf/element] with body: {"strategy":"xpath","selector":"//android.widget.TextView[@content-desc='Animation']","context":"","multiple":false}
-2023-05-02 17:41:15:768 [WD Proxy] Got response with status 200: {"sessionId":"f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf","value":{"ELEMENT":"00000000-0000-04f1-ffff-ffff0000002c","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-04f1-ffff-ffff0000002c"}}
-2023-05-02 17:41:15:768 [W3C (321c961c)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-04f1-ffff-ffff0000002c","ELEMENT":"00000000-0000-04f1-ffff-ffff0000002c"}
-2023-05-02 17:41:15:769 [HTTP] <-- POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/element 200 60 ms - 137
-2023-05-02 17:41:15:769 [HTTP] 
-2023-05-02 17:41:15:773 [HTTP] --> POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/element/00000000-0000-04f1-ffff-ffff0000002c/click
-2023-05-02 17:41:15:773 [HTTP] {"id":"00000000-0000-04f1-ffff-ffff0000002c"}
-2023-05-02 17:41:15:773 [W3C (321c961c)] Calling AppiumDriver.click() with args: ["00000000-0000-04f1-ffff-ffff0000002c","321c961c-e167-4342-80ed-75c056f68525"]
-2023-05-02 17:41:15:774 [WD Proxy] Matched '/element/00000000-0000-04f1-ffff-ffff0000002c/click' to command name 'click'
-2023-05-02 17:41:15:775 [WD Proxy] Proxying [POST /element/00000000-0000-04f1-ffff-ffff0000002c/click] to [POST http://127.0.0.1:8204/wd/hub/session/f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf/element/00000000-0000-04f1-ffff-ffff0000002c/click] with body: {"element":"00000000-0000-04f1-ffff-ffff0000002c"}
-2023-05-02 17:41:16:793 [WD Proxy] Got response with status 200: {"sessionId":"f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf","value":null}
-2023-05-02 17:41:16:793 [W3C (321c961c)] Responding to client with driver.click() result: null
-2023-05-02 17:41:16:794 [HTTP] <-- POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/element/00000000-0000-04f1-ffff-ffff0000002c/click 200 1021 ms - 14
-2023-05-02 17:41:16:794 [HTTP] 
-2023-05-02 17:41:16:798 [HTTP] --> POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/back
-2023-05-02 17:41:16:798 [HTTP] {}
-2023-05-02 17:41:16:799 [W3C (321c961c)] Driver proxy active, passing request on via HTTP proxy
-2023-05-02 17:41:16:799 [WD Proxy] Matched '/wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/back' to command name 'back'
-2023-05-02 17:41:16:800 [WD Proxy] Proxying [POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/back] to [POST http://127.0.0.1:8204/wd/hub/session/f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf/back] with body: {}
-2023-05-02 17:41:16:833 [WD Proxy] Got response with status 200: {"sessionId":"f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf","value":null}
-2023-05-02 17:41:16:834 [WD Proxy] Replacing sessionId f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf with 321c961c-e167-4342-80ed-75c056f68525
-2023-05-02 17:41:16:834 [HTTP] <-- POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/back 200 36 ms - 65
-2023-05-02 17:41:16:835 [HTTP] 
-2023-05-02 17:41:16:838 [HTTP] --> POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/back
-2023-05-02 17:41:16:838 [HTTP] {}
-2023-05-02 17:41:16:838 [W3C (321c961c)] Driver proxy active, passing request on via HTTP proxy
-2023-05-02 17:41:16:839 [WD Proxy] Matched '/wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/back' to command name 'back'
-2023-05-02 17:41:16:839 [WD Proxy] Proxying [POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/back] to [POST http://127.0.0.1:8204/wd/hub/session/f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf/back] with body: {}
-2023-05-02 17:41:17:486 [WD Proxy] Got response with status 200: {"sessionId":"f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf","value":null}
-2023-05-02 17:41:17:487 [WD Proxy] Replacing sessionId f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf with 321c961c-e167-4342-80ed-75c056f68525
-2023-05-02 17:41:17:488 [HTTP] <-- POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/back 200 650 ms - 65
-2023-05-02 17:41:17:488 [HTTP] 
-2023-05-02 17:41:17:493 [HTTP] --> POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/back
-2023-05-02 17:41:17:493 [HTTP] {}
-2023-05-02 17:41:17:493 [W3C (321c961c)] Driver proxy active, passing request on via HTTP proxy
-2023-05-02 17:41:17:494 [WD Proxy] Matched '/wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/back' to command name 'back'
-2023-05-02 17:41:17:494 [WD Proxy] Proxying [POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/back] to [POST http://127.0.0.1:8204/wd/hub/session/f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf/back] with body: {}
-2023-05-02 17:41:18:136 [WD Proxy] Got response with status 200: {"sessionId":"f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf","value":null}
-2023-05-02 17:41:18:136 [WD Proxy] Replacing sessionId f49a9a0c-fc98-4d4e-9bc3-d1266d6632bf with 321c961c-e167-4342-80ed-75c056f68525
-2023-05-02 17:41:18:137 [HTTP] <-- POST /wd/hub/session/321c961c-e167-4342-80ed-75c056f68525/back 200 644 ms - 65
-2023-05-02 17:41:18:137 [HTTP] 
-2023-05-02 17:41:29:472 [HTTP] --> GET /wd/hub/session/2e123140-c39e-4a1f-9e74-ef88b45d673b/timeouts
-2023-05-02 17:41:29:472 [HTTP] {}
-2023-05-02 17:41:29:473 [GENERIC (2e123140)] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
-2023-05-02 17:41:29:473 [GENERIC (2e123140)]     at asyncHandler (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:243:15)
-2023-05-02 17:41:29:473 [GENERIC (2e123140)]     at C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:423:15
-2023-05-02 17:41:29:473 [GENERIC (2e123140)]     at Layer.handle [as handle_request] (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
-2023-05-02 17:41:29:473 [GENERIC (2e123140)]     at next (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\route.js:137:13)
-2023-05-02 17:41:29:473 [GENERIC (2e123140)]     at Route.dispatch (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\route.js:112:3)
-2023-05-02 17:41:29:473 [GENERIC (2e123140)]     at Layer.handle [as handle_request] (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
-2023-05-02 17:41:29:473 [GENERIC (2e123140)]     at C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:281:22
-2023-05-02 17:41:29:473 [GENERIC (2e123140)]     at param (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:354:14)
-2023-05-02 17:41:29:473 [GENERIC (2e123140)]     at param (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
-2023-05-02 17:41:29:473 [GENERIC (2e123140)]     at Function.process_params (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:410:3)
-2023-05-02 17:41:29:473 [GENERIC (2e123140)]     at next (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
-2023-05-02 17:41:29:473 [GENERIC (2e123140)]     at logger (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\morgan\index.js:144:5)
-2023-05-02 17:41:29:474 [GENERIC (2e123140)]     at Layer.handle [as handle_request] (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
-2023-05-02 17:41:29:474 [GENERIC (2e123140)]     at trim_prefix (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:317:13)
-2023-05-02 17:41:29:474 [GENERIC (2e123140)]     at C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:284:7
-2023-05-02 17:41:29:474 [GENERIC (2e123140)]     at Function.process_params (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\express\lib\router\index.js:335:12)
-2023-05-02 17:41:29:475 [HTTP] <-- GET /wd/hub/session/2e123140-c39e-4a1f-9e74-ef88b45d673b/timeouts 404 7 ms - 2778
-2023-05-02 17:41:29:475 [HTTP] 
-2023-05-02 17:41:29:479 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:79:23)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:479 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:79:23)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:480 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:480 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:482 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:483 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:483 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:485 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:486 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:487 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:488 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:489 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:490 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:491 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:492 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:492 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:493 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:494 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:494 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:495 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:496 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
-2023-05-02 17:41:29:497 uncaughtException: EPIPE: broken pipe, write
-Error: EPIPE: broken pipe, write
-    at Socket._write (node:internal/net:61:25)
-    at writeOrBuffer (node:internal/streams/writable:392:12)
-    at _write (node:internal/streams/writable:333:10)
-    at Socket.Writable.write (node:internal/streams/writable:337:10)
-    at Console.log (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
-    at Console._write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\index.js:103:17)
-    at doWrite (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:428:64)
-    at writeOrBuffer (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:417:5)
-    at Console.Writable.write (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:334:11)
-    at DerivedLogger.ondata (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:681:20)
-    at DerivedLogger.emit (node:events:525:35)
-    at addChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:298:12)
-    at readableAddChunk (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:280:11)
-    at DerivedLogger.Readable.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:241:10)
-    at DerivedLogger.Transform.push (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:139:32)
-    at DerivedLogger._transform (C:\Users\cmash\Downloads\Appium-Desktop\resources\app\node_modules\appium\node_modules\winston\lib\winston\logger.js:305:12)
+2023-05-28 17:10:24:487 [Appium] Welcome to Appium v2.0.0-beta.66
+2023-05-28 17:10:24:490 [Appium] Non-default server args:
+2023-05-28 17:10:24:493 [Appium] { address: '127.0.0.1', basePath: '/wd/hub' }
+2023-05-28 17:10:24:494 [Appium] Attempting to load driver uiautomator2...
+2023-05-28 17:10:24:496 [Appium] Requiring driver at C:\Users\cmash\.appium\node_modules\appium-uiautomator2-driver
+2023-05-28 17:10:26:600 [Appium] Appium REST http interface listener started on 127.0.0.1:4723/wd/hub
+2023-05-28 17:10:26:601 [Appium] Available drivers:
+2023-05-28 17:10:26:601 [Appium]   - uiautomator2@2.24.0 (automationName 'UiAutomator2')
+2023-05-28 17:10:26:602 [Appium] No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
+2023-05-28 17:10:26:918 [HTTP] --> GET /wd/hub/status
+2023-05-28 17:10:26:919 [HTTP] {}
+2023-05-28 17:10:26:920 [AppiumDriver@6a43] Calling AppiumDriver.getStatus() with args: []
+2023-05-28 17:10:26:923 [AppiumDriver@6a43] Responding to client with driver.getStatus() result: {"build":{"version":"2.0.0-beta.66"}}
+2023-05-28 17:10:26:932 [HTTP] <-- GET /wd/hub/status 200 8 ms - 47
+2023-05-28 17:10:26:933 [HTTP] 
+2023-05-28 17:10:27:372 [HTTP] Request idempotency key: a089896a-33be-4e8b-aa9c-f575fd07a9f4
+2023-05-28 17:10:27:393 [HTTP] --> POST /wd/hub/session
+2023-05-28 17:10:27:393 [HTTP] {"desiredCapabilities":{"app":"C:\\Users\\cmash\\Documents\\Papi\\Repo\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk","appActivity":"io.appium.android.apis.ApiDemos","appPackage":"io.appium.android.apis","appium:appium-version":"1.22.3","platformVersion":"8.1","automationName":"UiAutomator2","platformName":"Android","deviceName":"emulator-5554"},"capabilities":{"firstMatch":[{"appium:app":"C:\\Users\\cmash\\Documents\\Papi\\Repo\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk","appium:appActivity":"io.appium.android.apis.ApiDemos","appium:appPackage":"io.appium.android.apis","appium:appium-version":"1.22.3","appium:automationName":"UiAutomator2","appium:deviceName":"emulator-5554","platformName":"android","appium:platformVersion":"8.1"}]}}
+2023-05-28 17:10:27:394 [AppiumDriver@6a43] Calling AppiumDriver.createSession() with args: [{"app":"C:\\Users\\cmash\\Documents\\Papi\\Repo\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk","appActivity":"io.appium.android.apis.ApiDemos","appPackage":"io.appium.android.apis","appium:appium-version":"1.22.3","platformVersion":"8.1","automationName":"UiAutomator2","platformName":"Android","deviceName":"emulator-5554"},null,{"firstMatch":[{"appium:app":"C:\\Users\\cmash\\Documents\\Papi\\Repo\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk","appium:appActivity":"io.appium.android.apis.ApiDemos","appium:appPackage":"io.appium.android.apis","appium:appium-version":"1.22.3","appium:automationName":"UiAutomator2","appium:deviceName":"emulator-5554","platformName":"android","appium:platformVersion":"8.1"}]}]
+2023-05-28 17:10:27:395 [AppiumDriver@6a43] Event 'newSessionRequested' logged at 1685293827394 (19:10:27 GMT+0200 (Central European Summer Time))
+2023-05-28 17:10:27:400 [Appium] Attempting to find matching driver for automationName 'UiAutomator2' and platformName 'android'
+2023-05-28 17:10:27:401 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2023-05-28 17:10:27:401 [Appium] Will require it at C:\Users\cmash\.appium\node_modules\appium-uiautomator2-driver
+2023-05-28 17:10:27:401 [Appium] Requiring driver at C:\Users\cmash\.appium\node_modules\appium-uiautomator2-driver
+2023-05-28 17:10:27:402 [AppiumDriver@6a43] Appium v2.0.0-beta.66 creating new AndroidUiautomator2Driver (v2.24.0) session
+2023-05-28 17:10:27:402 [AppiumDriver@6a43] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2023-05-28 17:10:27:402 [AppiumDriver@6a43] Appium's BaseDriver version is 9.3.7
+2023-05-28 17:10:27:402 [AppiumDriver@6a43] AndroidUiautomator2Driver's BaseDriver version is 9.3.7
+2023-05-28 17:10:27:404 [AndroidUiautomator2Driver@99ce] Creating session with W3C capabilities: {
+2023-05-28 17:10:27:405 [AndroidUiautomator2Driver@99ce]   "alwaysMatch": {
+2023-05-28 17:10:27:405 [AndroidUiautomator2Driver@99ce]     "platformName": "android",
+2023-05-28 17:10:27:405 [AndroidUiautomator2Driver@99ce]     "appium:app": "C:\\Users\\cmash\\Documents\\Papi\\Repo\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk",
+2023-05-28 17:10:27:405 [AndroidUiautomator2Driver@99ce]     "appium:appActivity": "io.appium.android.apis.ApiDemos",
+2023-05-28 17:10:27:405 [AndroidUiautomator2Driver@99ce]     "appium:appPackage": "io.appium.android.apis",
+2023-05-28 17:10:27:405 [AndroidUiautomator2Driver@99ce]     "appium:appium-version": "1.22.3",
+2023-05-28 17:10:27:405 [AndroidUiautomator2Driver@99ce]     "appium:automationName": "UiAutomator2",
+2023-05-28 17:10:27:405 [AndroidUiautomator2Driver@99ce]     "appium:deviceName": "emulator-5554",
+2023-05-28 17:10:27:405 [AndroidUiautomator2Driver@99ce]     "appium:platformVersion": "8.1"
+2023-05-28 17:10:27:406 [AndroidUiautomator2Driver@99ce]   },
+2023-05-28 17:10:27:406 [AndroidUiautomator2Driver@99ce]   "firstMatch": [
+2023-05-28 17:10:27:406 [AndroidUiautomator2Driver@99ce]     {}
+2023-05-28 17:10:27:406 [AndroidUiautomator2Driver@99ce]   ]
+2023-05-28 17:10:27:406 [AndroidUiautomator2Driver@99ce] }
+2023-05-28 17:10:27:416 [AndroidUiautomator2Driver@99ce] The following capabilities were provided, but are not recognized by Appium:
+2023-05-28 17:10:27:416 [AndroidUiautomator2Driver@99ce]   appium-version
+2023-05-28 17:10:27:416 [AndroidUiautomator2Driver@99ce (efa416e3)] Session created with session id: efa416e3-ab75-4c53-919f-c92ad6c9ca14
+2023-05-28 17:10:27:420 [BaseDriver] Using local app 'C:\Users\cmash\Documents\Papi\Repo\AppiumApp\target\test-classes\builds\A_ApiDemos-debug.apk'
+2023-05-28 17:10:27:433 [AndroidUiautomator2Driver@99ce (efa416e3)] Checking whether app is actually present
+2023-05-28 17:10:27:444 [ADB] Found 2 'build-tools' folders under 'C:\Users\cmash\AppData\Local\Android\Sdk' (newest first):
+2023-05-28 17:10:27:444 [ADB]     C:/Users/cmash/AppData/Local/Android/Sdk/build-tools/33.0.2
+2023-05-28 17:10:27:445 [ADB]     C:/Users/cmash/AppData/Local/Android/Sdk/build-tools/30.0.3
+2023-05-28 17:10:27:446 [ADB] Using 'adb.exe' from 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2023-05-28 17:10:27:447 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 start-server'
+2023-05-28 17:10:27:498 [AndroidDriver] Retrieving device list
+2023-05-28 17:10:27:498 [ADB] Trying to find a connected android device
+2023-05-28 17:10:27:499 [ADB] Getting connected devices
+2023-05-28 17:10:27:646 [ADB] Connected devices: [{"udid":"emulator-5554","state":"device"}]
+2023-05-28 17:10:27:646 [AndroidDriver] Looking for a device with Android '8.1.0'
+2023-05-28 17:10:27:647 [ADB] Setting device id to emulator-5554
+2023-05-28 17:10:27:647 [ADB] Getting device platform version
+2023-05-28 17:10:27:647 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell getprop ro.build.version.release'
+2023-05-28 17:10:27:775 [ADB] Current device property 'ro.build.version.release': 8.1.0
+2023-05-28 17:10:27:775 [AndroidDriver] Using device: emulator-5554
+2023-05-28 17:10:27:777 [ADB] Using 'adb.exe' from 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2023-05-28 17:10:27:777 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 start-server'
+2023-05-28 17:10:27:827 [ADB] Setting device id to emulator-5554
+2023-05-28 17:10:27:828 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell getprop ro.build.version.sdk'
+2023-05-28 17:10:27:900 [ADB] Current device property 'ro.build.version.sdk': 27
+2023-05-28 17:10:27:900 [ADB] Device API level: 27
+2023-05-28 17:10:27:901 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 wait-for-device'
+2023-05-28 17:10:27:953 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell echo ping'
+2023-05-28 17:10:28:019 [AndroidDriver] Pushing settings apk to device...
+2023-05-28 17:10:28:020 [ADB] Getting install status for io.appium.settings
+2023-05-28 17:10:28:021 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings'
+2023-05-28 17:10:28:088 [ADB] 'io.appium.settings' is installed
+2023-05-28 17:10:28:088 [ADB] Getting package info for 'io.appium.settings'
+2023-05-28 17:10:28:088 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings'
+2023-05-28 17:10:28:173 [ADB] The version name of the installed 'io.appium.settings' is greater or equal to the application version name ('5.0.3' >= '5.0.3')
+2023-05-28 17:10:28:174 [ADB] There is no need to install/upgrade 'C:\Users\cmash\.appium\node_modules\appium-uiautomator2-driver\node_modules\io.appium.settings\apks\settings_apk-debug.apk'
+2023-05-28 17:10:28:175 [ADB] Getting IDs of all 'io.appium.settings' processes
+2023-05-28 17:10:28:175 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell 'pgrep --help; echo $?''
+2023-05-28 17:10:28:225 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pgrep -f \(\[\[:blank:\]\]\|\^\)io\.appium\.settings\(\[\[:blank:\]\]\|\$\)'
+2023-05-28 17:10:28:346 [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
+2023-05-28 17:10:28:347 [Logcat] Starting logs capture with command: C:\\Users\\cmash\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 logcat -v threadtime
+2023-05-28 17:10:28:470 [AndroidUiautomator2Driver@99ce (efa416e3)] Forwarding UiAutomator2 Server port 6790 to local port 8203
+2023-05-28 17:10:28:472 [ADB] Forwarding system: 8203 to device: 6790
+2023-05-28 17:10:28:472 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 forward tcp:8203 tcp:6790'
+2023-05-28 17:10:28:546 [ADB] Getting install status for io.appium.uiautomator2.server
+2023-05-28 17:10:28:546 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server'
+2023-05-28 17:10:28:623 [ADB] 'io.appium.uiautomator2.server' is installed
+2023-05-28 17:10:28:623 [ADB] Getting package info for 'io.appium.uiautomator2.server'
+2023-05-28 17:10:28:623 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server'
+2023-05-28 17:10:28:935 [ADB] The installed 'io.appium.uiautomator2.server' package is older than 'C:\Users\cmash\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v5.8.2.apk' (95 < 121 or '4.27.0' < '5.8.2')'
+2023-05-28 17:10:28:936 [AndroidUiautomator2Driver@99ce (efa416e3)] io.appium.uiautomator2.server installation state: olderVersionInstalled
+2023-05-28 17:10:28:936 [ADB] Checking app cert for C:\Users\cmash\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v5.8.2.apk
+2023-05-28 17:10:28:969 [ADB] Using 'apksigner.jar' from 'C:\Users\cmash\AppData\Local\Android\Sdk\build-tools\33.0.2\lib\apksigner.jar'
+2023-05-28 17:10:28:971 [ADB] Starting apksigner: 'C:\\Program Files\\Java\\jdk-17\\bin\\java.exe' -Xmx1024M -Xss1m -jar C:\\Users\\cmash\\AppData\\Local\\Android\\Sdk\\build-tools\\33.0.2\\lib\\apksigner.jar verify --print-certs C:\\Users\\cmash\\.appium\\node_modules\\appium-uiautomator2-driver\\node_modules\\appium-uiautomator2-server\\apks\\appium-uiautomator2-server-v5.8.2.apk
+2023-05-28 17:10:29:805 [ADB] apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+2023-05-28 17:10:29:805 [ADB] Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+2023-05-28 17:10:29:805 [ADB] Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+2023-05-28 17:10:29:805 [ADB] Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+2023-05-28 17:10:29:806 [ADB] 
+2023-05-28 17:10:29:806 [ADB] sha256 hash did match for 'appium-uiautomator2-server-v5.8.2.apk'
+2023-05-28 17:10:29:806 [ADB] 'C:\Users\cmash\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v5.8.2.apk' is signed with the default certificate
+2023-05-28 17:10:29:807 [ADB] Getting install status for io.appium.uiautomator2.server.test
+2023-05-28 17:10:29:807 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server.test'
+2023-05-28 17:10:29:857 [ADB] 'io.appium.uiautomator2.server.test' is installed
+2023-05-28 17:10:29:858 [ADB] Checking app cert for C:\Users\cmash\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk
+2023-05-28 17:10:29:861 [ADB] Starting apksigner: 'C:\\Program Files\\Java\\jdk-17\\bin\\java.exe' -Xmx1024M -Xss1m -jar C:\\Users\\cmash\\AppData\\Local\\Android\\Sdk\\build-tools\\33.0.2\\lib\\apksigner.jar verify --print-certs C:\\Users\\cmash\\.appium\\node_modules\\appium-uiautomator2-driver\\node_modules\\appium-uiautomator2-server\\apks\\appium-uiautomator2-server-debug-androidTest.apk
+2023-05-28 17:10:30:201 [ADB] apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+2023-05-28 17:10:30:201 [ADB] Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+2023-05-28 17:10:30:202 [ADB] Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+2023-05-28 17:10:30:202 [ADB] Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+2023-05-28 17:10:30:202 [ADB] 
+2023-05-28 17:10:30:202 [ADB] sha256 hash did match for 'appium-uiautomator2-server-debug-androidTest.apk'
+2023-05-28 17:10:30:202 [ADB] 'C:\Users\cmash\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk' is signed with the default certificate
+2023-05-28 17:10:30:202 [AndroidUiautomator2Driver@99ce (efa416e3)] Server packages are going to be (re)installed
+2023-05-28 17:10:30:202 [AndroidUiautomator2Driver@99ce (efa416e3)] Full packages reinstall is going to be performed
+2023-05-28 17:10:30:202 [ADB] Uninstalling io.appium.uiautomator2.server
+2023-05-28 17:10:30:203 [ADB] Getting install status for io.appium.uiautomator2.server
+2023-05-28 17:10:30:203 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server'
+2023-05-28 17:10:30:257 [ADB] 'io.appium.uiautomator2.server' is installed
+2023-05-28 17:10:30:257 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am force-stop io.appium.uiautomator2.server'
+2023-05-28 17:10:30:338 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 uninstall io.appium.uiautomator2.server'
+2023-05-28 17:10:30:509 [ADB] 'adb uninstall io.appium.uiautomator2.server' command output: Success
+2023-05-28 17:10:30:510 [ADB] io.appium.uiautomator2.server was successfully uninstalled
+2023-05-28 17:10:30:511 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 version'
+2023-05-28 17:10:30:542 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 features'
+2023-05-28 17:10:30:621 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 help'
+2023-05-28 17:10:30:656 [ADB] The application at 'C:\Users\cmash\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v5.8.2.apk' will not be cached, because the device under test has confirmed the support of streamed installs
+2023-05-28 17:10:30:656 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 install -r C:\Users\cmash\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v5.8.2.apk'
+2023-05-28 17:10:32:390 [ADB] The installation of 'appium-uiautomator2-server-v5.8.2.apk' took 1734ms
+2023-05-28 17:10:32:390 [ADB] Install command stdout: Performing Streamed Install
+2023-05-28 17:10:32:390 [ADB] Success
+2023-05-28 17:10:32:391 [ADB] Uninstalling io.appium.uiautomator2.server.test
+2023-05-28 17:10:32:391 [ADB] Getting install status for io.appium.uiautomator2.server.test
+2023-05-28 17:10:32:391 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server.test'
+2023-05-28 17:10:32:470 [ADB] 'io.appium.uiautomator2.server.test' is installed
+2023-05-28 17:10:32:470 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am force-stop io.appium.uiautomator2.server.test'
+2023-05-28 17:10:32:599 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 uninstall io.appium.uiautomator2.server.test'
+2023-05-28 17:10:32:764 [ADB] 'adb uninstall io.appium.uiautomator2.server.test' command output: Success
+2023-05-28 17:10:32:764 [ADB] io.appium.uiautomator2.server.test was successfully uninstalled
+2023-05-28 17:10:32:765 [ADB] The application at 'C:\Users\cmash\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk' will not be cached, because the device under test has confirmed the support of streamed installs
+2023-05-28 17:10:32:765 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 install -r C:\Users\cmash\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
+2023-05-28 17:10:33:198 [ADB] The installation of 'appium-uiautomator2-server-debug-androidTest.apk' took 433ms
+2023-05-28 17:10:33:198 [ADB] Install command stdout: Performing Streamed Install
+2023-05-28 17:10:33:198 [ADB] Success
+2023-05-28 17:10:33:202 [AndroidUiautomator2Driver@99ce (efa416e3)] Waiting up to 30000ms for services to be available
+2023-05-28 17:10:33:203 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pm list instrumentation'
+2023-05-28 17:10:33:485 [AndroidUiautomator2Driver@99ce (efa416e3)] Instrumentation target 'io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner' is available
+2023-05-28 17:10:33:487 [ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2023-05-28 17:10:33:488 [ADB] Got the following command chunks to execute: [["dumpsys","deviceidle","whitelist","+io.appium.settings",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server.test",";"]]
+2023-05-28 17:10:33:488 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys deviceidle whitelist +io.appium.settings ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server.test ;'
+2023-05-28 17:10:33:598 [ADB] Checking app cert for C:\Users\cmash\Documents\Papi\Repo\AppiumApp\target\test-classes\builds\A_ApiDemos-debug.apk
+2023-05-28 17:10:33:605 [ADB] Starting apksigner: 'C:\\Program Files\\Java\\jdk-17\\bin\\java.exe' -Xmx1024M -Xss1m -jar C:\\Users\\cmash\\AppData\\Local\\Android\\Sdk\\build-tools\\33.0.2\\lib\\apksigner.jar verify --print-certs C:\\Users\\cmash\\Documents\\Papi\\Repo\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk
+2023-05-28 17:10:34:063 [ADB] apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+2023-05-28 17:10:34:063 [ADB] Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+2023-05-28 17:10:34:063 [ADB] Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+2023-05-28 17:10:34:064 [ADB] Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+2023-05-28 17:10:34:064 [ADB] 
+2023-05-28 17:10:34:064 [ADB] sha256 hash did match for 'A_ApiDemos-debug.apk'
+2023-05-28 17:10:34:064 [ADB] 'C:\Users\cmash\Documents\Papi\Repo\AppiumApp\target\test-classes\builds\A_ApiDemos-debug.apk' is signed with the default certificate
+2023-05-28 17:10:34:064 [ADB] Getting install status for io.appium.android.apis
+2023-05-28 17:10:34:064 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.android.apis'
+2023-05-28 17:10:34:119 [ADB] 'io.appium.android.apis' is installed
+2023-05-28 17:10:34:119 [ADB] Getting package info for 'io.appium.android.apis'
+2023-05-28 17:10:34:119 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.android.apis'
+2023-05-28 17:10:34:186 [ADB] Cannot read version codes of 'C:\Users\cmash\Documents\Papi\Repo\AppiumApp\target\test-classes\builds\A_ApiDemos-debug.apk' and/or 'io.appium.android.apis'
+2023-05-28 17:10:34:187 [ADB] Cannot read version names of 'C:\Users\cmash\Documents\Papi\Repo\AppiumApp\target\test-classes\builds\A_ApiDemos-debug.apk' and/or 'io.appium.android.apis'
+2023-05-28 17:10:34:187 [ADB] The current install state of 'C:\Users\cmash\Documents\Papi\Repo\AppiumApp\target\test-classes\builds\A_ApiDemos-debug.apk' is unknown. Installing anyway
+2023-05-28 17:10:34:187 [ADB] The application at 'C:\Users\cmash\Documents\Papi\Repo\AppiumApp\target\test-classes\builds\A_ApiDemos-debug.apk' will not be cached, because the device under test has confirmed the support of streamed installs
+2023-05-28 17:10:34:187 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 install -r C:\Users\cmash\Documents\Papi\Repo\AppiumApp\target\test-classes\builds\A_ApiDemos-debug.apk'
+2023-05-28 17:10:34:766 [ADB] The installation of 'A_ApiDemos-debug.apk' took 579ms
+2023-05-28 17:10:34:767 [ADB] Install command stdout: Performing Streamed Install
+2023-05-28 17:10:34:767 [ADB] Success
+2023-05-28 17:10:34:767 [AndroidDriver] Performing fast reset on 'io.appium.android.apis'
+2023-05-28 17:10:34:767 [ADB] Getting install status for io.appium.android.apis
+2023-05-28 17:10:34:768 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.android.apis'
+2023-05-28 17:10:34:921 [ADB] 'io.appium.android.apis' is installed
+2023-05-28 17:10:34:921 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am force-stop io.appium.android.apis'
+2023-05-28 17:10:35:094 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pm clear io.appium.android.apis'
+2023-05-28 17:10:35:543 [AndroidDriver] Performed fast reset on the installed 'io.appium.android.apis' application (stop and clear)
+2023-05-28 17:10:35:543 [AndroidUiautomator2Driver@99ce (efa416e3)] Performing shallow cleanup of automation leftovers
+2023-05-28 17:10:35:559 [AndroidUiautomator2Driver@99ce (efa416e3)] No obsolete sessions have been detected (socket hang up)
+2023-05-28 17:10:35:559 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am force-stop io.appium.uiautomator2.server.test'
+2023-05-28 17:10:35:662 [AndroidUiautomator2Driver@99ce (efa416e3)] Starting UIAutomator2 server 5.8.2
+2023-05-28 17:10:35:662 [AndroidUiautomator2Driver@99ce (efa416e3)] Using UIAutomator2 server from 'C:\Users\cmash\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v5.8.2.apk' and test from 'C:\Users\cmash\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
+2023-05-28 17:10:35:662 [AndroidUiautomator2Driver@99ce (efa416e3)] Waiting up to 30000ms for UiAutomator2 to be online...
+2023-05-28 17:10:35:663 [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","emulator-5554","shell","am","instrument","-w","-e","disableAnalytics",true,"io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner"]
+2023-05-28 17:10:35:670 [AndroidUiautomator2Driver@99ce (efa416e3)] Matched '/status' to command name 'getStatus'
+2023-05-28 17:10:35:671 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [GET /status] to [GET http://127.0.0.1:8203/status] with no body
+2023-05-28 17:10:35:679 [AndroidUiautomator2Driver@99ce (efa416e3)] socket hang up
+2023-05-28 17:10:36:367 [Instrumentation] io.appium.uiautomator2.server.test.AppiumUiAutomator2Server:
+2023-05-28 17:10:36:692 [AndroidUiautomator2Driver@99ce (efa416e3)] Matched '/status' to command name 'getStatus'
+2023-05-28 17:10:36:693 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [GET /status] to [GET http://127.0.0.1:8203/status] with no body
+2023-05-28 17:10:36:696 [AndroidUiautomator2Driver@99ce (efa416e3)] socket hang up
+2023-05-28 17:10:37:697 [AndroidUiautomator2Driver@99ce (efa416e3)] Matched '/status' to command name 'getStatus'
+2023-05-28 17:10:37:697 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [GET /status] to [GET http://127.0.0.1:8203/status] with no body
+2023-05-28 17:10:37:802 [AndroidUiautomator2Driver@99ce (efa416e3)] Got response with status 200: {"sessionId":"None","value":{"message":"UiAutomator2 Server is ready to accept commands","ready":true}}
+2023-05-28 17:10:37:803 [AndroidUiautomator2Driver@99ce (efa416e3)] The initialization of the instrumentation process took 2140ms
+2023-05-28 17:10:37:803 [AndroidUiautomator2Driver@99ce (efa416e3)] Matched '/session' to command name 'createSession'
+2023-05-28 17:10:37:803 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [POST /session] to [POST http://127.0.0.1:8203/session] with body: {"capabilities":{"firstMatch":[{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","app":"C:\\Users\\cmash\\Documents\\Papi\\Repo\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk","appActivity":"io.appium.android.apis.ApiDemos","appPackage":"io.appium.android.apis","appium-version":"1.22.3","automationName":"UiAutomator2","deviceName":"emulator-5554","platformVersion":"8.1"},"platformName":"android","app":"C:\\Users\\cmash\\Documents\\Papi\\Repo\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk","appActivity":"io.appium.android.apis.ApiDemos","appPackage":"io.appium.android.apis","appium-version":"1.22.3","automationName":"UiAutomator2","deviceName":"emulator-5554","platformVersion":"8.1","deviceUDID":"emulator-5554"}],"alwaysMatch":{}}}
+2023-05-28 17:10:37:867 [AndroidUiautomator2Driver@99ce (efa416e3)] Got response with status 200: {"sessionId":"a0203bb3-7a13-41ef-b0b2-1c98361cdea1","value":{"capabilities":{"firstMatch":[{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","app":"C:\\Users\\cmash\\Documents\\Papi\\Repo\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk","appActivity":"io.appium.android.apis.ApiDemos","appPackage":"io.appium.android.apis","appium-version":"1.22.3","automationName":"UiAutomator2","deviceName":"emulator-5554","platformVersion":"8.1"},"platformName":"android","app":"C:\\Users\\cmash\\Documents\\Papi\\Repo\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk","appActivity":"io.appium.android.apis.ApiDemos","appPackage":"io.appium.android.apis","appium-version":"1.22.3","automationName":"UiAutomator2","deviceName":"emulator-5554","platformVersion":"8.1","deviceUDID":"emulator-5554"}],"alwaysMatch":{}},"session...
+2023-05-28 17:10:37:867 [AndroidUiautomator2Driver@99ce (efa416e3)] Determined the downstream protocol as 'W3C'
+2023-05-28 17:10:37:884 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [GET /appium/device/info] to [GET http://127.0.0.1:8203/session/a0203bb3-7a13-41ef-b0b2-1c98361cdea1/appium/device/info] with no body
+2023-05-28 17:10:37:975 [AndroidUiautomator2Driver@99ce (efa416e3)] Got response with status 200: {"sessionId":"a0203bb3-7a13-41ef-b0b2-1c98361cdea1","value":{"androidId":"dd65ef14e70eaef9","apiVersion":"27","bluetooth":null,"brand":"google","carrierName":"Android","displayDensity":440,"locale":"en_US","manufacturer":"Google","model":"Android SDK built for x86","networks":[{"capabilities":{"SSID":null,"linkDownBandwidthKbps":102400,"linkUpstreamBandwidthKbps":51200,"networkCapabilities":"NET_CAPABILITY_MMS,NET_CAPABILITY_SUPL,NET_CAPABILITY_DUN,NET_CAPABILITY_FOTA,NET_CAPABILITY_IMS,NET_CAPABILITY_CBS,NET_CAPABILITY_IA,NET_CAPABILITY_INTERNET,NET_CAPABILITY_NOT_RESTRICTED,NET_CAPABILITY_TRUSTED,NET_CAPABILITY_NOT_VPN,NET_CAPABILITY_VALIDATED","signalStrength":-2147483648,"transportTypes":"TRANSPORT_CELLULAR"},"detailedState":"CONNECTED","extraInfo":"epc.tmobile.com","isAvailable":true,"isConnected":true,"isFailover":false,"isRoaming":false,"state":"CONNECTED","subtype":13,"subtypeName":"LTE","type":0,"typeName":"MOBILE"},{"capabilities":{"SSID":null,"linkDownBandwidthKbps":1048576,"linkUpstreamBandwidt...
+2023-05-28 17:10:37:976 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys window'
+2023-05-28 17:10:38:029 [AndroidDriver] Screen already unlocked, doing nothing
+2023-05-28 17:10:38:029 [AndroidUiautomator2Driver@99ce (efa416e3)] Starting 'io.appium.android.apis/io.appium.android.apis.ApiDemos and waiting for 'io.appium.android.apis/io.appium.android.apis.ApiDemos'
+2023-05-28 17:10:38:030 [ADB] Running 'C:\Users\cmash\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am start -W -n io.appium.android.apis/io.appium.android.apis.ApiDemos -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000'
+2023-05-28 17:10:38:905 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [GET /appium/device/pixel_ratio] to [GET http://127.0.0.1:8203/session/a0203bb3-7a13-41ef-b0b2-1c98361cdea1/appium/device/pixel_ratio] with no body
+2023-05-28 17:10:38:923 [AndroidUiautomator2Driver@99ce (efa416e3)] Got response with status 200: {"sessionId":"a0203bb3-7a13-41ef-b0b2-1c98361cdea1","value":2.75}
+2023-05-28 17:10:38:924 [AndroidUiautomator2Driver@99ce (efa416e3)] Matched '/appium/device/system_bars' to command name 'getSystemBars'
+2023-05-28 17:10:38:925 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [GET /appium/device/system_bars] to [GET http://127.0.0.1:8203/session/a0203bb3-7a13-41ef-b0b2-1c98361cdea1/appium/device/system_bars] with no body
+2023-05-28 17:10:38:943 [AndroidUiautomator2Driver@99ce (efa416e3)] Got response with status 200: {"sessionId":"a0203bb3-7a13-41ef-b0b2-1c98361cdea1","value":{"statusBar":66}}
+2023-05-28 17:10:38:944 [AndroidUiautomator2Driver@99ce (efa416e3)] Matched '/window/current/size' to command name 'getWindowSize'
+2023-05-28 17:10:38:944 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [GET /window/current/size] to [GET http://127.0.0.1:8203/session/a0203bb3-7a13-41ef-b0b2-1c98361cdea1/window/current/size] with no body
+2023-05-28 17:10:38:962 [AndroidUiautomator2Driver@99ce (efa416e3)] Got response with status 200: {"sessionId":"a0203bb3-7a13-41ef-b0b2-1c98361cdea1","value":{"height":2148,"width":1080}}
+2023-05-28 17:10:38:963 [AppiumDriver@6a43] New AndroidUiautomator2Driver session created successfully, session efa416e3-ab75-4c53-919f-c92ad6c9ca14 added to master session list
+2023-05-28 17:10:38:964 [AppiumDriver@6a43] Event 'newSessionStarted' logged at 1685293838964 (19:10:38 GMT+0200 (Central European Summer Time))
+2023-05-28 17:10:38:965 [AndroidUiautomator2Driver@99ce (efa416e3)] Cached the protocol value 'W3C' for the new session efa416e3-ab75-4c53-919f-c92ad6c9ca14
+2023-05-28 17:10:38:966 [AndroidUiautomator2Driver@99ce (efa416e3)] Responding to client with driver.createSession() result: {"capabilities":{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","app":"C:\\Users\\cmash\\Documents\\Papi\\Repo\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk","appActivity":"io.appium.android.apis.ApiDemos","appPackage":"io.appium.android.apis","appium-version":"1.22.3","automationName":"UiAutomator2","deviceName":"emulator-5554","platformVersion":"8.1"},"platformName":"android","app":"C:\\Users\\cmash\\Documents\\Papi\\Repo\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk","appActivity":"io.appium.android.apis.ApiDemos","appPackage":"io.appium.android.apis","appium-version":"1.22.3","automationName":"UiAutomator2","deviceName":"emulator-5554","platformVersion":"8.1.0","deviceUDID":"emulator-5554","deviceApiLevel":27,"deviceScreenSize":"1080x2280","deviceScreenDensity":440,"deviceModel":"Android S...
+2023-05-28 17:10:38:971 [HTTP] <-- POST /wd/hub/session 200 11576 ms - 1230
+2023-05-28 17:10:38:971 [HTTP] 
+2023-05-28 17:10:39:067 [HTTP] --> POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/element
+2023-05-28 17:10:39:067 [HTTP] {"using":"xpath","value":"//android.widget.TextView[@content-desc='App']"}
+2023-05-28 17:10:39:073 [AndroidUiautomator2Driver@99ce (efa416e3)] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.TextView[@content-desc='App']","efa416e3-ab75-4c53-919f-c92ad6c9ca14"]
+2023-05-28 17:10:39:074 [AndroidUiautomator2Driver@99ce (efa416e3)] Valid locator strategies for this request: xpath, id, class name, accessibility id, css selector, -android uiautomator
+2023-05-28 17:10:39:075 [AndroidUiautomator2Driver@99ce (efa416e3)] Waiting up to 0 ms for condition
+2023-05-28 17:10:39:076 [AndroidUiautomator2Driver@99ce (efa416e3)] Matched '/element' to command name 'findElement'
+2023-05-28 17:10:39:077 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [POST /element] to [POST http://127.0.0.1:8203/session/a0203bb3-7a13-41ef-b0b2-1c98361cdea1/element] with body: {"strategy":"xpath","selector":"//android.widget.TextView[@content-desc='App']","context":"","multiple":false}
+2023-05-28 17:10:40:433 [AndroidUiautomator2Driver@99ce (efa416e3)] Got response with status 200: {"sessionId":"a0203bb3-7a13-41ef-b0b2-1c98361cdea1","value":{"ELEMENT":"00000000-0000-004a-ffff-ffff00000007","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-004a-ffff-ffff00000007"}}
+2023-05-28 17:10:40:433 [AndroidUiautomator2Driver@99ce (efa416e3)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-004a-ffff-ffff00000007","ELEMENT":"00000000-0000-004a-ffff-ffff00000007"}
+2023-05-28 17:10:40:434 [HTTP] <-- POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/element 200 1367 ms - 137
+2023-05-28 17:10:40:434 [HTTP] 
+2023-05-28 17:10:40:448 [HTTP] --> POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/element/00000000-0000-004a-ffff-ffff00000007/click
+2023-05-28 17:10:40:448 [HTTP] {"id":"00000000-0000-004a-ffff-ffff00000007"}
+2023-05-28 17:10:40:453 [AndroidUiautomator2Driver@99ce (efa416e3)] Calling AppiumDriver.click() with args: ["00000000-0000-004a-ffff-ffff00000007","efa416e3-ab75-4c53-919f-c92ad6c9ca14"]
+2023-05-28 17:10:40:454 [AndroidUiautomator2Driver@99ce (efa416e3)] Matched '/element/00000000-0000-004a-ffff-ffff00000007/click' to command name 'click'
+2023-05-28 17:10:40:455 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [POST /element/00000000-0000-004a-ffff-ffff00000007/click] to [POST http://127.0.0.1:8203/session/a0203bb3-7a13-41ef-b0b2-1c98361cdea1/element/00000000-0000-004a-ffff-ffff00000007/click] with body: {"element":"00000000-0000-004a-ffff-ffff00000007"}
+2023-05-28 17:10:41:671 [AndroidUiautomator2Driver@99ce (efa416e3)] Got response with status 200: {"sessionId":"a0203bb3-7a13-41ef-b0b2-1c98361cdea1","value":null}
+2023-05-28 17:10:41:672 [AndroidUiautomator2Driver@99ce (efa416e3)] Responding to client with driver.click() result: null
+2023-05-28 17:10:41:672 [HTTP] <-- POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/element/00000000-0000-004a-ffff-ffff00000007/click 200 1224 ms - 14
+2023-05-28 17:10:41:673 [HTTP] 
+2023-05-28 17:10:41:677 [HTTP] --> POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/element
+2023-05-28 17:10:41:677 [HTTP] {"using":"xpath","value":"//android.widget.TextView[@content-desc='Activity']"}
+2023-05-28 17:10:41:678 [AndroidUiautomator2Driver@99ce (efa416e3)] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.TextView[@content-desc='Activity']","efa416e3-ab75-4c53-919f-c92ad6c9ca14"]
+2023-05-28 17:10:41:678 [AndroidUiautomator2Driver@99ce (efa416e3)] Valid locator strategies for this request: xpath, id, class name, accessibility id, css selector, -android uiautomator
+2023-05-28 17:10:41:678 [AndroidUiautomator2Driver@99ce (efa416e3)] Waiting up to 0 ms for condition
+2023-05-28 17:10:41:679 [AndroidUiautomator2Driver@99ce (efa416e3)] Matched '/element' to command name 'findElement'
+2023-05-28 17:10:41:679 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [POST /element] to [POST http://127.0.0.1:8203/session/a0203bb3-7a13-41ef-b0b2-1c98361cdea1/element] with body: {"strategy":"xpath","selector":"//android.widget.TextView[@content-desc='Activity']","context":"","multiple":false}
+2023-05-28 17:10:41:762 [AndroidUiautomator2Driver@99ce (efa416e3)] Got response with status 200: {"sessionId":"a0203bb3-7a13-41ef-b0b2-1c98361cdea1","value":{"ELEMENT":"00000000-0000-004b-ffff-ffff00000018","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-004b-ffff-ffff00000018"}}
+2023-05-28 17:10:41:763 [AndroidUiautomator2Driver@99ce (efa416e3)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-004b-ffff-ffff00000018","ELEMENT":"00000000-0000-004b-ffff-ffff00000018"}
+2023-05-28 17:10:41:764 [HTTP] <-- POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/element 200 86 ms - 137
+2023-05-28 17:10:41:764 [HTTP] 
+2023-05-28 17:10:41:769 [HTTP] --> POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/element/00000000-0000-004b-ffff-ffff00000018/click
+2023-05-28 17:10:41:769 [HTTP] {"id":"00000000-0000-004b-ffff-ffff00000018"}
+2023-05-28 17:10:41:770 [AndroidUiautomator2Driver@99ce (efa416e3)] Calling AppiumDriver.click() with args: ["00000000-0000-004b-ffff-ffff00000018","efa416e3-ab75-4c53-919f-c92ad6c9ca14"]
+2023-05-28 17:10:41:770 [AndroidUiautomator2Driver@99ce (efa416e3)] Matched '/element/00000000-0000-004b-ffff-ffff00000018/click' to command name 'click'
+2023-05-28 17:10:41:770 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [POST /element/00000000-0000-004b-ffff-ffff00000018/click] to [POST http://127.0.0.1:8203/session/a0203bb3-7a13-41ef-b0b2-1c98361cdea1/element/00000000-0000-004b-ffff-ffff00000018/click] with body: {"element":"00000000-0000-004b-ffff-ffff00000018"}
+2023-05-28 17:10:42:913 [AndroidUiautomator2Driver@99ce (efa416e3)] Got response with status 200: {"sessionId":"a0203bb3-7a13-41ef-b0b2-1c98361cdea1","value":null}
+2023-05-28 17:10:42:913 [AndroidUiautomator2Driver@99ce (efa416e3)] Responding to client with driver.click() result: null
+2023-05-28 17:10:42:914 [HTTP] <-- POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/element/00000000-0000-004b-ffff-ffff00000018/click 200 1145 ms - 14
+2023-05-28 17:10:42:914 [HTTP] 
+2023-05-28 17:10:42:919 [HTTP] --> POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/element
+2023-05-28 17:10:42:919 [HTTP] {"using":"xpath","value":"//android.widget.TextView[@content-desc='Animation']"}
+2023-05-28 17:10:42:920 [AndroidUiautomator2Driver@99ce (efa416e3)] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.TextView[@content-desc='Animation']","efa416e3-ab75-4c53-919f-c92ad6c9ca14"]
+2023-05-28 17:10:42:920 [AndroidUiautomator2Driver@99ce (efa416e3)] Valid locator strategies for this request: xpath, id, class name, accessibility id, css selector, -android uiautomator
+2023-05-28 17:10:42:920 [AndroidUiautomator2Driver@99ce (efa416e3)] Waiting up to 0 ms for condition
+2023-05-28 17:10:42:920 [AndroidUiautomator2Driver@99ce (efa416e3)] Matched '/element' to command name 'findElement'
+2023-05-28 17:10:42:921 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [POST /element] to [POST http://127.0.0.1:8203/session/a0203bb3-7a13-41ef-b0b2-1c98361cdea1/element] with body: {"strategy":"xpath","selector":"//android.widget.TextView[@content-desc='Animation']","context":"","multiple":false}
+2023-05-28 17:10:42:992 [AndroidUiautomator2Driver@99ce (efa416e3)] Got response with status 200: {"sessionId":"a0203bb3-7a13-41ef-b0b2-1c98361cdea1","value":{"ELEMENT":"00000000-0000-004c-ffff-ffff0000002c","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-004c-ffff-ffff0000002c"}}
+2023-05-28 17:10:42:993 [AndroidUiautomator2Driver@99ce (efa416e3)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-004c-ffff-ffff0000002c","ELEMENT":"00000000-0000-004c-ffff-ffff0000002c"}
+2023-05-28 17:10:42:994 [HTTP] <-- POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/element 200 75 ms - 137
+2023-05-28 17:10:42:994 [HTTP] 
+2023-05-28 17:10:42:998 [HTTP] --> POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/element/00000000-0000-004c-ffff-ffff0000002c/click
+2023-05-28 17:10:42:998 [HTTP] {"id":"00000000-0000-004c-ffff-ffff0000002c"}
+2023-05-28 17:10:42:999 [AndroidUiautomator2Driver@99ce (efa416e3)] Calling AppiumDriver.click() with args: ["00000000-0000-004c-ffff-ffff0000002c","efa416e3-ab75-4c53-919f-c92ad6c9ca14"]
+2023-05-28 17:10:42:999 [AndroidUiautomator2Driver@99ce (efa416e3)] Matched '/element/00000000-0000-004c-ffff-ffff0000002c/click' to command name 'click'
+2023-05-28 17:10:43:000 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [POST /element/00000000-0000-004c-ffff-ffff0000002c/click] to [POST http://127.0.0.1:8203/session/a0203bb3-7a13-41ef-b0b2-1c98361cdea1/element/00000000-0000-004c-ffff-ffff0000002c/click] with body: {"element":"00000000-0000-004c-ffff-ffff0000002c"}
+2023-05-28 17:10:44:066 [AndroidUiautomator2Driver@99ce (efa416e3)] Got response with status 200: {"sessionId":"a0203bb3-7a13-41ef-b0b2-1c98361cdea1","value":null}
+2023-05-28 17:10:44:066 [AndroidUiautomator2Driver@99ce (efa416e3)] Responding to client with driver.click() result: null
+2023-05-28 17:10:44:067 [HTTP] <-- POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/element/00000000-0000-004c-ffff-ffff0000002c/click 200 1068 ms - 14
+2023-05-28 17:10:44:067 [HTTP] 
+2023-05-28 17:10:44:071 [HTTP] --> POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/back
+2023-05-28 17:10:44:071 [HTTP] {}
+2023-05-28 17:10:44:072 [AndroidUiautomator2Driver@99ce (efa416e3)] Driver proxy active, passing request on via HTTP proxy
+2023-05-28 17:10:44:074 [AndroidUiautomator2Driver@99ce (efa416e3)] Matched '/wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/back' to command name 'back'
+2023-05-28 17:10:44:074 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/back] to [POST http://127.0.0.1:8203/session/a0203bb3-7a13-41ef-b0b2-1c98361cdea1/back] with body: {}
+2023-05-28 17:10:44:117 [AndroidUiautomator2Driver@99ce (efa416e3)] Got response with status 200: {"sessionId":"a0203bb3-7a13-41ef-b0b2-1c98361cdea1","value":null}
+2023-05-28 17:10:44:118 [AndroidUiautomator2Driver@99ce (efa416e3)] Replacing sessionId a0203bb3-7a13-41ef-b0b2-1c98361cdea1 with efa416e3-ab75-4c53-919f-c92ad6c9ca14
+2023-05-28 17:10:44:118 [HTTP] <-- POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/back 200 47 ms - 65
+2023-05-28 17:10:44:118 [HTTP] 
+2023-05-28 17:10:44:122 [HTTP] --> POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/back
+2023-05-28 17:10:44:123 [HTTP] {}
+2023-05-28 17:10:44:124 [AndroidUiautomator2Driver@99ce (efa416e3)] Driver proxy active, passing request on via HTTP proxy
+2023-05-28 17:10:44:126 [AndroidUiautomator2Driver@99ce (efa416e3)] Matched '/wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/back' to command name 'back'
+2023-05-28 17:10:44:126 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/back] to [POST http://127.0.0.1:8203/session/a0203bb3-7a13-41ef-b0b2-1c98361cdea1/back] with body: {}
+2023-05-28 17:10:44:772 [AndroidUiautomator2Driver@99ce (efa416e3)] Got response with status 200: {"sessionId":"a0203bb3-7a13-41ef-b0b2-1c98361cdea1","value":null}
+2023-05-28 17:10:44:772 [AndroidUiautomator2Driver@99ce (efa416e3)] Replacing sessionId a0203bb3-7a13-41ef-b0b2-1c98361cdea1 with efa416e3-ab75-4c53-919f-c92ad6c9ca14
+2023-05-28 17:10:44:773 [HTTP] <-- POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/back 200 651 ms - 65
+2023-05-28 17:10:44:773 [HTTP] 
+2023-05-28 17:10:44:778 [HTTP] --> POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/back
+2023-05-28 17:10:44:778 [HTTP] {}
+2023-05-28 17:10:44:779 [AndroidUiautomator2Driver@99ce (efa416e3)] Driver proxy active, passing request on via HTTP proxy
+2023-05-28 17:10:44:781 [AndroidUiautomator2Driver@99ce (efa416e3)] Matched '/wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/back' to command name 'back'
+2023-05-28 17:10:44:781 [AndroidUiautomator2Driver@99ce (efa416e3)] Proxying [POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/back] to [POST http://127.0.0.1:8203/session/a0203bb3-7a13-41ef-b0b2-1c98361cdea1/back] with body: {}
+2023-05-28 17:10:45:427 [AndroidUiautomator2Driver@99ce (efa416e3)] Got response with status 200: {"sessionId":"a0203bb3-7a13-41ef-b0b2-1c98361cdea1","value":null}
+2023-05-28 17:10:45:427 [AndroidUiautomator2Driver@99ce (efa416e3)] Replacing sessionId a0203bb3-7a13-41ef-b0b2-1c98361cdea1 with efa416e3-ab75-4c53-919f-c92ad6c9ca14
+2023-05-28 17:10:45:428 [HTTP] <-- POST /wd/hub/session/efa416e3-ab75-4c53-919f-c92ad6c9ca14/back 200 650 ms - 65
+2023-05-28 17:10:45:428 [HTTP] 
