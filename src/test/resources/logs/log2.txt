@@ -1,0 +1,182 @@
+2023-05-24 11:28:35:303 [Appium] Welcome to Appium v2.0.0-beta.66
+2023-05-24 11:28:35:306 [Appium] Non-default server args:
+2023-05-24 11:28:35:308 [Appium] { address: '127.0.0.1', basePath: '/wd/hub' }
+2023-05-24 11:28:35:309 [Appium] Attempting to load driver uiautomator2...
+2023-05-24 11:28:35:311 [Appium] Requiring driver at C:\Users\2245419\.appium\node_modules\appium-uiautomator2-driver
+2023-05-24 11:28:37:141 [Appium] Appium REST http interface listener started on 127.0.0.1:4723/wd/hub
+2023-05-24 11:28:37:142 [Appium] Available drivers:
+2023-05-24 11:28:37:142 [Appium]   - uiautomator2@2.24.1 (automationName 'UiAutomator2')
+2023-05-24 11:28:37:142 [Appium] No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
+2023-05-24 11:28:37:333 [HTTP] --> GET /wd/hub/status
+2023-05-24 11:28:37:333 [HTTP] {}
+2023-05-24 11:28:37:334 [AppiumDriver@db46] Calling AppiumDriver.getStatus() with args: []
+2023-05-24 11:28:37:335 [AppiumDriver@db46] Responding to client with driver.getStatus() result: {"build":{"version":"2.0.0-beta.66"}}
+2023-05-24 11:28:37:341 [HTTP] <-- GET /wd/hub/status 200 5 ms - 47
+2023-05-24 11:28:37:342 [HTTP] 
+2023-05-24 11:28:38:049 [HTTP] Request idempotency key: 473ee144-9b2e-4265-967b-3bba136a40ea
+2023-05-24 11:28:38:068 [HTTP] --> POST /wd/hub/session
+2023-05-24 11:28:38:068 [HTTP] {"desiredCapabilities":{"app":"C:\\Users\\2245419\\Documents\\CodeAppiumApp\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk","appActivity":"io.appium.android.apis.ApiDemos","appPackage":"io.appium.android.apis","appium:appium-version":"1.22.3","platformVersion":"8.1","platformName":"Android","deviceName":"emulator-5554"},"capabilities":{"firstMatch":[{"appium:app":"C:\\Users\\2245419\\Documents\\CodeAppiumApp\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk","appium:appActivity":"io.appium.android.apis.ApiDemos","appium:appPackage":"io.appium.android.apis","appium:appium-version":"1.22.3","appium:deviceName":"emulator-5554","platformName":"android","appium:platformVersion":"8.1"}]}}
+2023-05-24 11:28:38:069 [AppiumDriver@db46] Calling AppiumDriver.createSession() with args: [{"app":"C:\\Users\\2245419\\Documents\\CodeAppiumApp\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk","appActivity":"io.appium.android.apis.ApiDemos","appPackage":"io.appium.android.apis","appium:appium-version":"1.22.3","platformVersion":"8.1","platformName":"Android","deviceName":"emulator-5554"},null,{"firstMatch":[{"appium:app":"C:\\Users\\2245419\\Documents\\CodeAppiumApp\\AppiumApp\\target\\test-classes\\builds\\A_ApiDemos-debug.apk","appium:appActivity":"io.appium.android.apis.ApiDemos","appium:appPackage":"io.appium.android.apis","appium:appium-version":"1.22.3","appium:deviceName":"emulator-5554","platformName":"android","appium:platformVersion":"8.1"}]}]
+2023-05-24 11:28:38:070 [AppiumDriver@db46] Event 'newSessionRequested' logged at 1684927718070 (13:28:38 GMT+0200 (Central European Summer Time))
+2023-05-24 11:28:38:076 [Appium] Could not parse W3C capabilities: 'automationName' can't be blank
+2023-05-24 11:28:38:077 [AppiumDriver@db46] Event 'newSessionStarted' logged at 1684927718077 (13:28:38 GMT+0200 (Central European Summer Time))
+2023-05-24 11:28:38:100 [AppiumDriver@db46] Encountered internal error running command: InvalidArgumentError: 'automationName' can't be blank
+2023-05-24 11:28:38:100 [AppiumDriver@db46]     at processCapabilities (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\capabilities.js:345:13)
+2023-05-24 11:28:38:100 [AppiumDriver@db46]     at parseCapsForInnerDriver (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\lib\utils.js:135:40)
+2023-05-24 11:28:38:100 [AppiumDriver@db46]     at AppiumDriver.createSession (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\lib\appium.js:251:49)
+2023-05-24 11:28:38:100 [AppiumDriver@db46]     at commandExecutor (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:106:18)
+2023-05-24 11:28:38:101 [AppiumDriver@db46]     at AppiumDriver.executeCommand (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:123:15)
+2023-05-24 11:28:38:101 [AppiumDriver@db46]     at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-05-24 11:28:38:101 [AppiumDriver@db46]     at defaultBehavior (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\lib\appium.js:680:16)
+2023-05-24 11:28:38:101 [AppiumDriver@db46]     at AppiumDriver.executeWrappedCommand (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\lib\appium.js:774:16)
+2023-05-24 11:28:38:101 [AppiumDriver@db46]     at AppiumDriver.executeCommand (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\lib\appium.js:696:17)
+2023-05-24 11:28:38:101 [AppiumDriver@db46]     at asyncHandler (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:387:19)
+2023-05-24 11:28:38:102 [HTTP] <-- POST /wd/hub/session 400 34 ms - 1503
+2023-05-24 11:28:38:102 [HTTP] 
+2023-05-24 11:37:26:135 [HTTP] --> GET /wd/hub/status
+2023-05-24 11:37:26:136 [HTTP] {}
+2023-05-24 11:37:26:136 [AppiumDriver@db46] Calling AppiumDriver.getStatus() with args: []
+2023-05-24 11:37:26:165 uncaughtException: EPIPE: broken pipe, write
+Error: EPIPE: broken pipe, write
+    at Socket._write (node:internal/net:61:25)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:79:23)
+    at Console._write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston-transport\index.js:103:17)
+    at doWrite (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at Console.Writable.write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at DerivedLogger.ondata (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:629:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at addChunk (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:279:12)
+    at readableAddChunk (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:262:11)
+    at DerivedLogger.Readable.push (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:228:10)
+    at DerivedLogger.Transform.push (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:132:32)
+    at DerivedLogger._transform (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\logger.js:313:12)
+    at DerivedLogger.Transform._read (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:166:10)
+    at DerivedLogger.Transform._write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:155:83)
+    at doWrite (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at DerivedLogger.Writable.write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at DerivedLogger.<computed> [as info] (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\create-logger.js:81:14)
+2023-05-24 11:37:26:174 uncaughtException: EPIPE: broken pipe, write
+Error: EPIPE: broken pipe, write
+    at Socket._write (node:internal/net:61:25)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
+    at Console._write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston-transport\index.js:103:17)
+    at doWrite (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at Console.Writable.write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at DerivedLogger.ondata (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:629:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at addChunk (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:279:12)
+    at readableAddChunk (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:262:11)
+    at DerivedLogger.Readable.push (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:228:10)
+    at DerivedLogger.Transform.push (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:132:32)
+    at DerivedLogger._transform (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\logger.js:313:12)
+    at DerivedLogger.Transform._read (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:166:10)
+    at DerivedLogger.Transform._write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:155:83)
+    at doWrite (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at DerivedLogger.Writable.write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at DerivedLogger.log (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\logger.js:216:12)
+2023-05-24 11:37:26:182 uncaughtException: EPIPE: broken pipe, write
+Error: EPIPE: broken pipe, write
+    at Socket._write (node:internal/net:61:25)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
+    at Console._write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston-transport\index.js:103:17)
+    at doWrite (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at Console.Writable.write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at DerivedLogger.ondata (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:629:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at addChunk (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:279:12)
+    at readableAddChunk (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:262:11)
+    at DerivedLogger.Readable.push (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:228:10)
+    at DerivedLogger.Transform.push (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:132:32)
+    at DerivedLogger._transform (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\logger.js:313:12)
+    at DerivedLogger.Transform._read (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:166:10)
+    at DerivedLogger.Transform._write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:155:83)
+    at doWrite (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at DerivedLogger.Writable.write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at DerivedLogger.log (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\logger.js:216:12)
+2023-05-24 11:37:26:191 uncaughtException: EPIPE: broken pipe, write
+Error: EPIPE: broken pipe, write
+    at Socket._write (node:internal/net:61:25)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
+    at Console._write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston-transport\index.js:103:17)
+    at doWrite (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at Console.Writable.write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at DerivedLogger.ondata (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:629:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at addChunk (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:279:12)
+    at readableAddChunk (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:262:11)
+    at DerivedLogger.Readable.push (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:228:10)
+    at DerivedLogger.Transform.push (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:132:32)
+    at DerivedLogger._transform (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\logger.js:313:12)
+    at DerivedLogger.Transform._read (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:166:10)
+    at DerivedLogger.Transform._write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:155:83)
+    at doWrite (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at DerivedLogger.Writable.write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at DerivedLogger.log (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\logger.js:216:12)
+2023-05-24 11:37:26:200 uncaughtException: EPIPE: broken pipe, write
+Error: EPIPE: broken pipe, write
+    at Socket._write (node:internal/net:61:25)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
+    at Console._write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston-transport\index.js:103:17)
+    at doWrite (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at Console.Writable.write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at DerivedLogger.ondata (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:629:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at addChunk (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:279:12)
+    at readableAddChunk (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:262:11)
+    at DerivedLogger.Readable.push (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:228:10)
+    at DerivedLogger.Transform.push (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:132:32)
+    at DerivedLogger._transform (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\logger.js:313:12)
+    at DerivedLogger.Transform._read (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:166:10)
+    at DerivedLogger.Transform._write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:155:83)
+    at doWrite (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at DerivedLogger.Writable.write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at DerivedLogger.log (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\logger.js:216:12)
+2023-05-24 11:37:26:207 uncaughtException: EPIPE: broken pipe, write
+Error: EPIPE: broken pipe, write
+    at Socket._write (node:internal/net:61:25)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\transports\console.js:51:25)
+    at Console._write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston-transport\index.js:103:17)
+    at doWrite (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at Console.Writable.write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at DerivedLogger.ondata (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:629:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at addChunk (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:279:12)
+    at readableAddChunk (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:262:11)
+    at DerivedLogger.Readable.push (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_readable.js:228:10)
+    at DerivedLogger.Transform.push (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:132:32)
+    at DerivedLogger._transform (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\logger.js:313:12)
+    at DerivedLogger.Transform._read (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:166:10)
+    at DerivedLogger.Transform._write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_transform.js:155:83)
+    at doWrite (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at DerivedLogger.Writable.write (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at DerivedLogger.log (C:\Users\2245419\AppData\Roaming\npm\node_modules\appium\node_modules\winston\lib\winston\logger.js:216:12)
