@@ -24,7 +24,7 @@ public class AppFactory {
 	public static void androidLaunchApp(UiAutomator2Options options) throws MalformedURLException {
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options);
 		AppDriver.setDriver(driver);
-		System.out.println("---------- Android Driver has been set ----------");
+		System.out.println("---------- Android Driver has been set in ThreadLocal ----------");
 	}
 
 	public static void iosLaunchApp(XCUITestOptions options) throws MalformedURLException {
