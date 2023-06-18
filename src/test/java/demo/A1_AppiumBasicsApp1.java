@@ -44,7 +44,7 @@ public class A1_AppiumBasicsApp1 {
 		driver.findElement(By.xpath("//android.widget.TextView[@index=3]")).click();
 		
 		int list1 = driver.findElements(By.xpath("//android.widget.TextView[@resource-id='android:id/text1']")).size();
-		System.out.println("List of Element 1: " + list1); //6
+		System.out.println("List of Element 1: " + list1); 
 		
 		driver.findElement(By.xpath("//android.widget.TextView[@text='Assets']")).click();
 		driver.findElement(By.xpath("//*[contains(@text,'Read')]")).click();
@@ -114,15 +114,16 @@ public class A1_AppiumBasicsApp1 {
 	
 	public static void main(String[] args) throws MalformedURLException {
 		A0_UiAutomator2Options options = new A0_UiAutomator2Options();
+		
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"),
 				options.getApiDemoApkOptions());
 
 		A1_AppiumBasicsApp1 obj = new A1_AppiumBasicsApp1();
-		obj.testBasicFlow();
+		//obj.testBasicFlow();
 		//obj.testXpaths();	
 		//obj.testClassNameLocator();
 		//obj.testIdAndAccessibilityId();
-		//obj.testGetAttribute();
+		obj.testGetAttribute();
 		
 		System.out.println("---------- Run Finished ----------");
 	}

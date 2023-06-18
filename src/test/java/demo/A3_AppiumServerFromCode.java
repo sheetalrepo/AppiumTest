@@ -59,7 +59,7 @@ public class A3_AppiumServerFromCode {
 		System.out.println("---- Stopped Appium Server----");
 	}
 
-	// App > Activity > Animation > Back to home page
+	
 	public void testSaucelabBasicFlow() throws InterruptedException {
 		driver.findElement(AppiumBy.accessibilityId("open menu")).click();
 		Thread.sleep(1000L);

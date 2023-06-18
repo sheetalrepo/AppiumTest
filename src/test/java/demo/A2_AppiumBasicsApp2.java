@@ -23,7 +23,8 @@ public class A2_AppiumBasicsApp2 {
 	public void testSaucelabBasicFlow() throws InterruptedException {
 		driver.findElement(AppiumBy.accessibilityId("open menu")).click();
 		Thread.sleep(1000L);
-		driver.findElement(AppiumBy.accessibilityId("menu item log in")).click();;
+		driver.findElement(AppiumBy.accessibilityId("menu item log in")).click();
+	
 		Thread.sleep(1000L);
 		driver.findElement(AppiumBy.accessibilityId("Username input field")).sendKeys("bob@example.com");;
 		Thread.sleep(1000L);

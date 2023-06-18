@@ -32,7 +32,7 @@ public class A6_AppiumNativeAppToWeb {
 		System.out.println("Current Handles: " + driver.getContextHandles());
 		System.out.println("Go to WebView");
 		driver.findElement(AppiumBy.accessibilityId("Webview")).click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		System.out.println("Current Handles: " + driver.getContextHandles());
 
 		//Get All available Context - [NATIVE_APP, WEBVIEW_com.wdiodemoapp]

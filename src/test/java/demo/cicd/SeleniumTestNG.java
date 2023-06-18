@@ -2,7 +2,7 @@ package demo.cicd;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -28,7 +28,7 @@ public class SeleniumTestNG {
 	
 	@BeforeClass
 	public void init() {
-		driver = new ChromeDriver(); 
+		//driver = new ChromeDriver();  //pom: required selenium-java 
 	}
 	
 	@Test

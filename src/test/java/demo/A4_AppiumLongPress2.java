@@ -14,7 +14,7 @@ import demo.helper.Utils;
  * 
  * functionally same as previous class
  */
-public class A5_AppiumLongPress {
+public class A4_AppiumLongPress2 {
 
 	static AppiumDriver driver;
 
